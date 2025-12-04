@@ -62,6 +62,8 @@ x=
 \end{pmatrix}
 $$
 
+d'où :
+
 $$
 Ax=
 \begin{pmatrix}
