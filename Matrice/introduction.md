@@ -62,21 +62,18 @@ x=
 \end{pmatrix}
 $$
 
-
 $$
 Ax=
 \begin{pmatrix}
 1\cdot 2 + 2\cdot 1 \\
 3\cdot 2 + 1\cdot 1
-\end{pmatrix},
-\quad
+\end{pmatrix}
 =
 \begin{pmatrix}
 4 \\
 7
 \end{pmatrix}
 $$
-
 
 Interprétation : la matrice transforme le vecteur en l'étirant, le tournant ou le comprimant.
 
