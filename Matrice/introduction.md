@@ -67,7 +67,8 @@ Ax=
 \begin{pmatrix}
 1\cdot 2 + 2\cdot 1 \\
 3\cdot 2 + 1\cdot 1
-\end{pmatrix}
+\end{pmatrix},
+\quad
 =
 \begin{pmatrix}
 4 \\
