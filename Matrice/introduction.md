@@ -13,7 +13,7 @@ x =
 \begin{pmatrix}
 2\\
 -1
-\end{pmatrix}.
+\end{pmatrix}
 $$
 
 Il représente une direction et une intensité dans l'espace.
@@ -27,7 +27,7 @@ A=
 \begin{pmatrix}
 1 & 3\\
 2 & -1
-\end{pmatrix}.
+\end{pmatrix}
 $$
 
 Elle représente une transformation linéaire : elle prend un vecteur en entrée et produit un nouveau vecteur.
@@ -43,7 +43,7 @@ Ax =
 \begin{pmatrix}
 a_{11}x_1 + a_{12}x_2 \\
 a_{21}x_1 + a_{22}x_2
-\end{pmatrix}.
+\end{pmatrix}
 $$
 
 Exemple :
@@ -59,7 +59,7 @@ x=
 \begin{pmatrix}
 2\\
 1
-\end{pmatrix}.
+\end{pmatrix}
 $$
 
 $$
@@ -73,7 +73,7 @@ Ax=
 \begin{pmatrix}
 4\\
 7
-\end{pmatrix}.
+\end{pmatrix}
 $$
 
 Interprétation : la matrice transforme le vecteur en l'étirant, le tournant ou le comprimant.
@@ -93,7 +93,7 @@ A=
 \begin{pmatrix}
 3 & 0\\
 0 & 1
-\end{pmatrix}.
+\end{pmatrix}
 $$
 
 Multiplie la coordonnée (x) par 3, laisse (y) inchangé.
@@ -105,7 +105,7 @@ A=
 \begin{pmatrix}
 0.5 & 0\\
 0 & 0.5
-\end{pmatrix}.
+\end{pmatrix}
 $$
 
 Réduit toutes les directions d'un facteur 2.
@@ -117,7 +117,7 @@ A=
 \begin{pmatrix}
 1 & 0\\
 0 & -1
-\end{pmatrix}.
+\end{pmatrix}
 $$
 
 Symétrie par rapport à l'axe (x).
@@ -129,7 +129,7 @@ A=
 \begin{pmatrix}
 1 & 1\\
 0 & 1
-\end{pmatrix}.
+\end{pmatrix}
 $$
 
 Incline les vecteurs vers la droite.
@@ -141,7 +141,7 @@ A=
 \begin{pmatrix}
 \cos\theta & -\sin\theta\\
 \sin\theta & \cos\theta
-\end{pmatrix}.
+\end{pmatrix}
 $$
 
 Rotation de tout l'espace d'un angle (\theta).
@@ -157,7 +157,7 @@ A = A^T,
 $$
 c'est-à-dire :
 $$
-a_{ij} = a_{ji}.
+a_{ij} = a_{ji}
 $$
 
 Exemple :
@@ -181,7 +181,7 @@ Les matrices symétriques possèdent des propriétés géométriques fortes, not
 Pour une matrice carrée (A), un vecteur non nul (v) est un vecteur propre s'il existe un réel $$\lambda$$ tel que :
 
 $$
-A v = \lambda v.
+A v = \lambda v
 $$
 
 * (v) est une direction préservée,
@@ -198,6 +198,7 @@ A=
 $$
 
 Alors :
+
 $$
 A
 \begin{pmatrix}
@@ -205,7 +206,6 @@ A
 0
 \end{pmatrix}
 =
-
 \begin{pmatrix}
 3\\
 0
@@ -214,12 +214,13 @@ A
 \begin{pmatrix}
 1\\
 0
-\end{pmatrix}.
+\end{pmatrix}
 $$
 
 Donc $$(1,0)^T$$ est un vecteur propre, valeur propre $$\lambda = 3$$.
 
 De même :
+
 $$
 A
 \begin{pmatrix}
@@ -227,12 +228,11 @@ A
 1
 \end{pmatrix}
 =
-
 2
 \begin{pmatrix}
 0\\
 1
-\end{pmatrix}.
+\end{pmatrix}
 $$
 
 ### 3. Interprétation géométrique
@@ -268,9 +268,11 @@ Une matrice qui n'est pas diagonalisable ne possède pas assez de vecteurs propr
 ## VI. Combinaison linéaire et base de vecteurs propres
 
 De nombreuses matrices, notamment les matrices symétriques, peuvent être diagonalisées :
+
 $$
 A = P D P^{-1},
 $$
+
 où (D) est diagonale, formée des valeurs propres.
 
 Cette idée servira plus tard pour :
@@ -301,6 +303,7 @@ La matrice de covariance est diagonalisée :
 ## Exercice 1 — Produit matrice–vecteur
 
 Calculer (Ax) :
+
 $$
 A=
 \begin{pmatrix}
@@ -312,7 +315,7 @@ x=
 \begin{pmatrix}
 1\\
 2
-\end{pmatrix}.
+\end{pmatrix}
 $$
 
 ## Exercice 2 — Symétrie
@@ -340,6 +343,7 @@ $$
 ## Exercice 3 — Vecteur propre simple
 
 Pour
+
 $$
 A=
 \begin{pmatrix}
@@ -355,6 +359,7 @@ $$
 ## Exercice 4 — Transformation linéaire
 
 Décrire géométriquement la transformation réalisée par :
+
 $$
 A=
 \begin{pmatrix}
