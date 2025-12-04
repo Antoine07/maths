@@ -65,10 +65,9 @@ $$
 $$
 Ax=
 \begin{pmatrix}
-1. 2 + 2. 1\\
-3.2 + 1. 1
-\end{pmatrix},
-\quad
+1\cdot 2 + 2\cdot 1\\
+3\cdot 2 + 1\cdot 1
+\end{pmatrix}
 =
 \begin{pmatrix}
 4\\
