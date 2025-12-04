@@ -167,7 +167,7 @@ S=
 \begin{pmatrix}
 2 & 1\\
 1 & 3
-\end{pmatrix}.
+\end{pmatrix}
 $$
 
 Les matrices symétriques possèdent des propriétés géométriques fortes, notamment l'existence de vecteurs propres orthogonaux.
