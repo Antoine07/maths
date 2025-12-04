@@ -7,6 +7,7 @@
 ### 1. Vecteurs
 
 Un vecteur est un ensemble ordonné de nombres.
+
 $$
 x =
 \begin{pmatrix}
@@ -20,6 +21,7 @@ Il représente une direction et une intensité dans l'espace.
 ### 2. Matrices
 
 Une matrice est un tableau de nombres.
+
 $$
 A=
 \begin{pmatrix}
@@ -35,6 +37,7 @@ Elle représente une transformation linéaire : elle prend un vecteur en entrée
 ## II. Multiplication matrice–vecteur
 
 Pour une matrice (A) et un vecteur (x), le produit (Ax) est défini par :
+
 $$
 Ax =
 \begin{pmatrix}
@@ -44,6 +47,7 @@ a_{21}x_1 + a_{22}x_2
 $$
 
 Exemple :
+
 $$
 A=
 \begin{pmatrix}
@@ -91,6 +95,7 @@ A=
 0 & 1
 \end{pmatrix}.
 $$
+
 Multiplie la coordonnée (x) par 3, laisse (y) inchangé.
 
 ### 2. Compression
@@ -102,6 +107,7 @@ A=
 0 & 0.5
 \end{pmatrix}.
 $$
+
 Réduit toutes les directions d'un facteur 2.
 
 ### 3. Réflexion (symétrie)
@@ -113,6 +119,7 @@ A=
 0 & -1
 \end{pmatrix}.
 $$
+
 Symétrie par rapport à l'axe (x).
 
 ### 4. Cisaillement (shear)
@@ -124,6 +131,7 @@ A=
 0 & 1
 \end{pmatrix}.
 $$
+
 Incline les vecteurs vers la droite.
 
 ### 5. Rotation
@@ -135,6 +143,7 @@ A=
 \sin\theta & \cos\theta
 \end{pmatrix}.
 $$
+
 Rotation de tout l'espace d'un angle (\theta).
 
 ---
@@ -142,6 +151,7 @@ Rotation de tout l'espace d'un angle (\theta).
 ## IV. Matrices particulières : matrices symétriques
 
 Une matrice est symétrique si :
+
 $$
 A = A^T,
 $$
@@ -151,6 +161,7 @@ a_{ij} = a_{ji}.
 $$
 
 Exemple :
+
 $$
 S=
 \begin{pmatrix}
@@ -168,6 +179,7 @@ Les matrices symétriques possèdent des propriétés géométriques fortes, not
 ### 1. Définition
 
 Pour une matrice carrée (A), un vecteur non nul (v) est un vecteur propre s'il existe un réel $$\lambda$$ tel que :
+
 $$
 A v = \lambda v.
 $$
