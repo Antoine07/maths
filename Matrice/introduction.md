@@ -62,6 +62,7 @@ x=
 \end{pmatrix}
 $$
 
+
 $$
 Ax=
 \begin{pmatrix}
@@ -76,9 +77,9 @@ Ax=
 \end{pmatrix}
 $$
 
+
 Interprétation : la matrice transforme le vecteur en l'étirant, le tournant ou le comprimant.
 
----
 
 ## III. Transformations linéaires
 
