@@ -15,7 +15,7 @@ x =
 \end{pmatrix}.
 $$
 
-Il représente une direction et une intensité dans l’espace.
+Il représente une direction et une intensité dans l'espace.
 
 ### 2. Matrices
 
@@ -72,13 +72,13 @@ Ax=
 \end{pmatrix}.
 $$
 
-Interprétation : la matrice transforme le vecteur en l’étirant, le tournant ou le comprimant.
+Interprétation : la matrice transforme le vecteur en l'étirant, le tournant ou le comprimant.
 
 ---
 
 ## III. Transformations linéaires
 
-Une matrice carrée représente une transformation linéaire de l’espace vers lui-même.
+Une matrice carrée représente une transformation linéaire de l'espace vers lui-même.
 
 Voici les transformations fondamentales.
 
@@ -102,7 +102,7 @@ A=
 0 & 0.5
 \end{pmatrix}.
 $$
-Réduit toutes les directions d’un facteur 2.
+Réduit toutes les directions d'un facteur 2.
 
 ### 3. Réflexion (symétrie)
 
@@ -113,7 +113,7 @@ A=
 0 & -1
 \end{pmatrix}.
 $$
-Symétrie par rapport à l’axe (x).
+Symétrie par rapport à l'axe (x).
 
 ### 4. Cisaillement (shear)
 
@@ -135,7 +135,7 @@ A=
 \sin\theta & \cos\theta
 \end{pmatrix}.
 $$
-Rotation de tout l’espace d’un angle (\theta).
+Rotation de tout l'espace d'un angle (\theta).
 
 ---
 
@@ -145,7 +145,7 @@ Une matrice est symétrique si :
 $$
 A = A^T,
 $$
-c’est-à-dire :
+c'est-à-dire :
 $$
 a_{ij} = a_{ji}.
 $$
@@ -159,7 +159,7 @@ S=
 \end{pmatrix}.
 $$
 
-Les matrices symétriques possèdent des propriétés géométriques fortes, notamment l’existence de vecteurs propres orthogonaux.
+Les matrices symétriques possèdent des propriétés géométriques fortes, notamment l'existence de vecteurs propres orthogonaux.
 
 ---
 
@@ -167,13 +167,13 @@ Les matrices symétriques possèdent des propriétés géométriques fortes, not
 
 ### 1. Définition
 
-Pour une matrice carrée (A), un vecteur non nul (v) est un vecteur propre s’il existe un réel $$\lambda$$ tel que :
+Pour une matrice carrée (A), un vecteur non nul (v) est un vecteur propre s'il existe un réel $$\lambda$$ tel que :
 $$
 A v = \lambda v.
 $$
 
 * (v) est une direction préservée,
-* $$\lambda$$ est le facteur d’étirement dans cette direction.
+* $$\lambda$$ est le facteur d'étirement dans cette direction.
 
 ### 2. Exemple simple
 
@@ -230,10 +230,26 @@ Ce sont les directions où la transformation agit de manière la plus simple.
 
 Cette notion sera essentielle plus tard pour :
 
-* analyser les directions principales d’une fonction (via une Hessienne),
+* analyser les directions principales d'une fonction (via une Hessienne),
 * comprendre des données (ACP),
 * étudier la stabilité de systèmes,
 * optimiser des critères.
+
+
+---
+
+### 4. Théorèmes importants
+
+**Matrices symétriques réelles.**
+Toute matrice symétrique réelle admet une famille complète de vecteurs propres réels, mutuellement orthogonaux, qui forment une base de l'espace.
+
+**Matrices diagonalisables.**
+Toute matrice diagonalisable possède suffisamment de vecteurs propres pour former une base.
+Ces vecteurs propres ne sont pas nécessairement orthogonaux.
+
+**Autres matrices.**
+Une matrice qui n'est pas diagonalisable ne possède pas assez de vecteurs propres pour former une base (et peut même ne pas en posséder du tout).
+
 
 ---
 
@@ -247,8 +263,24 @@ où (D) est diagonale, formée des valeurs propres.
 
 Cette idée servira plus tard pour :
 
-1. lire facilement la structure d’une transformation,
-2. identifier les directions principales d’un problème.
+1. lire facilement la structure d'une transformation,
+2. identifier les directions principales d'un problème.
+
+Diagonaliser, c'est trouver les axes naturels du problème.
+
+---
+
+## Une remarque en statistiques
+
+La covariance mesure comment deux variables varient ensemble : positive si elles montent ou descendent ensemble, négative si l'une monte quand l'autre descend.
+
+La matrice de covariance est diagonalisée :
+→ Les vecteurs propres = axes principaux
+→ Les valeurs propres = variances importantes
+
+
+> **(A) et (D) font la même chose : (A) le fait dans la base normale, (D) le fait dans la base des vecteurs propres où tout est plus simple.**
+
 
 ---
 
@@ -318,7 +350,3 @@ A=
 0 & -1
 \end{pmatrix}.
 $$
-
----
-
-Si vous le souhaitez, je peux maintenant l’insérer dans votre document global, ou ajouter une **page de synthèse** avant de passer aux gradients, jacobiennes et Hessiennes.
