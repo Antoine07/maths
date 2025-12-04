@@ -39,7 +39,7 @@ Elle représente une transformation linéaire : elle prend un vecteur en entrée
 Pour une matrice (A) et un vecteur (x), le produit (Ax) est défini par :
 
 $$
-Ax =
+Ax=
 \begin{pmatrix}
 a_{11}x_1 + a_{12}x_2 \\
 a_{21}x_1 + a_{22}x_2
@@ -69,7 +69,6 @@ Ax=
 3\cdot 2 + 1\cdot 1
 \end{pmatrix}
 =
-
 \begin{pmatrix}
 4\\
 7
