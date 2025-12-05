@@ -180,7 +180,9 @@ Toujours positif → fonction strictement croissante.
 Dériver :
 
 a) $$(f(x)=x^4 - 2x^2 + 1)$$
+
 b) $$(g(x)=\sqrt{x}(x^2+3))$$
+
 c) $$(h(x)=\frac{3x+1}{x-2})$$
 
 ---
@@ -190,7 +192,9 @@ c) $$(h(x)=\frac{3x+1}{x-2})$$
 Étudier les variations de :
 
 a) $$(f(x)=x^3+3x^2)$$
+
 b) $$(g(x)=\ln(x) - x)$$
+
 c) $$(h(x)=e^{-x})$$
 
 ---
@@ -200,7 +204,9 @@ c) $$(h(x)=e^{-x})$$
 Trouver les maxima/minima de :
 
 a) $$(f(x)=x^2 - 4x +1)$$
+
 b) $$(g(x)=x + \frac{1}{x})$$ sur $$(\mathbb{R}^{+})$$
+
 c) $$(h(x)=\sin x + x)$$
 
 ---
@@ -210,5 +216,7 @@ c) $$(h(x)=\sin x + x)$$
 Étudier la convexité de :
 
 a) $$(f(x)=x^4)$$
+
 b) $$(g(x)=x e^x)$$
+
 c) $$(h(x)=\ln(x))$$
