@@ -120,7 +120,7 @@ $$
 \begin{pmatrix}
 0.1 \ -0.05
 \end{pmatrix}
-=============
+=
 
 \begin{pmatrix}
 0.25 \ 0.30
@@ -193,7 +193,7 @@ Les variations sont :
 
 ## **Questions**
 
-### 1. Calculez la jacobienne (J_f(a,b)).
+### 1. Calculez la jacobienne $$J_f(a,b)$$.
 
 ### 2. Évaluez cette jacobienne au point ((2,1)).
 

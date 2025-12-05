@@ -1,0 +1,18 @@
+services:
+
+  jupyter:
+      image: jupyter/base-notebook:latest
+      environment:
+        JUPYTER_ENABLE_LAB: "yes"
+        GRANT_SUDO: "yes"
+        PYTHONPATH: "/home/jovyan/work/src"
+      user: root
+      ports:
+        - "8880:8888"
+      volumes:
+        - ./project:/home/jovyan/work
+      command: >
+        bash -c "
+        pip install -r /home/jovyan/work/config/requirements.txt &&
+        start-notebook.sh --NotebookApp.token='' --NotebookApp.password=''"
+      restart: always
