@@ -77,10 +77,7 @@ $$
 3. **Quotient**
 
 $$
-\left(\frac{f}{g}\right)'
-=
-\frac{f'g - fg'}{g^2}
-\quad (g \neq 0)
+\left(\frac{f}{g}\right)' = \frac{f'g - fg'}{g^2} \qquad (g \neq 0)
 $$
 
 4. **Composition** (chaîne)
