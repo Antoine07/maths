@@ -79,7 +79,6 @@ $$
 $$
 \left(\frac{f}{g}\right)'
 =
-
 \frac{f'g - fg'}{g^2}
 \quad (g \neq 0)
 $$
