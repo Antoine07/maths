@@ -83,7 +83,7 @@ $$
 4. **Composition** (chaîne)
 
 $$
-(f(g(x)))' = f'(g(x)) \cdot g'(x)
+f(g(x))' = f'(g(x)) \cdot g'(x)
 $$
 
 # 4. Dérivée et sens de variation
