@@ -253,11 +253,13 @@ $$
 ## Exercice 1 : Développer
 
 a) $$(2x-3)(x+4)$$
+
 b) $$(x+5)^2$$
 
 ## Exercice 2 : Factoriser
 
 a) $$4x^2 - 9$$
+
 b) $$x^2 - 6x + 9$$
 
 ## Exercice 3 : Simplifier
@@ -279,6 +281,7 @@ $$
 Simplifier :
 
 a) $$\ln(8x)$$
+
 b) $$\ln(x^3)$$
 
 ## Exercice 6 : Équation
