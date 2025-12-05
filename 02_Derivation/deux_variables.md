@@ -89,7 +89,7 @@ Le gradient regroupe toutes les dérivées partielles dans un vecteur :
 $$
 \nabla f(x,y)=
 \begin{pmatrix}
-f_x(x,y)\
+f_x(x,y)\\
 f_y(x,y)
 \end{pmatrix}.
 $$
@@ -143,7 +143,7 @@ On les regroupe dans la **matrice hessienne** :
 $$
 H_f(x,y)=
 \begin{pmatrix}
-f_{xx} & f_{xy} \
+f_{xx} & f_{xy} \\
 f_{yx} & f_{yy}
 \end{pmatrix}.
 $$
