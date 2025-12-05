@@ -205,7 +205,7 @@ Trouver les maxima/minima de :
 
 a) $$f(x)=x^2 - 4x +1$$
 
-b) $$g(x)=x + \frac{1}{x})$$ sur $$(\mathbb{R}^{+}$$
+b) $$g(x)=x + \frac{1}{x})$$ sur $$\mathbb{R}^{+}$$
 
 c) $$h(x)=\sin x + x$$
 
