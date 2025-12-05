@@ -1,4 +1,4 @@
-# Cours : Fonctions à deux variables
+# Fonctions à deux variables
 
 On étudie maintenant des fonctions qui prennent **deux variables d'entrée** :
 
@@ -75,8 +75,17 @@ On peut dériver dans **n'importe quelle direction** $$((u_1,u_2))$$.
 
 L'idée intuitive :
 
-$$f_x=$$ variation selon l'axe (x)
-$$f_y=$$ variation selon l'axe (y)
+variation selon l'axe (x)
+
+$$
+f_x
+$$ 
+
+variation selon l'axe (y)
+
+$$
+f_y
+$$
 
 dérivée directionnelle = combinaison des deux
 
@@ -96,7 +105,7 @@ $$
 
 Rôle essentiel :
 
-> Le gradient pointe vers la direction où la fonction augmente le plus vite, c'est très important dans tout problème de data de préciser une tendance.
+> Le gradient pointe vers la direction où la fonction augmente le plus vite.
 
 Exemple :
 
@@ -156,22 +165,14 @@ Cette matrice sert à déterminer :
 
 ---
 
-# 7. Exemples corrigés
-
-Vous avez les dérivées partielles premières, mais pour parler de **Hessien** et donc de **convexité/concavité en dimension 2**, il faut aller jusqu'aux dérivées secondes.
-
-Voici une présentation claire et complète pour chacun des trois exemples.
-
----
-
-# **Rappel essentiel : Hessien et convexité**
+# **Hessien et convexité**
 
 Pour une fonction f(x,y), le **Hessien** est :
 
 $$
 H_f(x,y)=
 \begin{pmatrix}
-f_{xx} & f_{xy} \
+f_{xx} & f_{xy} \\
 f_{yx} & f_{yy}
 \end{pmatrix}
 $$
@@ -183,7 +184,7 @@ Critères :
 1. Si le Hessien est **indéfini** → ni convexe ni concave.
 1. Si semi-défini → convexité faible.
 
-Pour un Hessien ( 2 \times 2 ) :
+Pour un Hessien  $$2 \times 2$$  
 
 1. Positif si : $$f_{xx} > 0$$ et $$\det(H_f) > 0$$
 1. Négatif si : $$f_{xx} < 0$$ et $$\det(H_f) > 0$$
@@ -216,7 +217,7 @@ $$
 $$
 H_f(x,y) =
 \begin{pmatrix}
-6 & -1 \
+6 & -1 \\
 -1 & 6y
 \end{pmatrix}
 $$
@@ -263,7 +264,7 @@ $$
 H_f(x,y) =
 e^{x+y}
 \begin{pmatrix}
-1 & 1 \
+1 & 1 \\
 1 & 1
 \end{pmatrix}
 $$
@@ -312,7 +313,7 @@ $$
 $$
 H_f(x,y) =
 \begin{pmatrix}
--\frac{1}{x^2} & 0 \
+-\frac{1}{x^2} & 0 \\
 0 & -\frac{1}{y^2}
 \end{pmatrix}
 $$
@@ -323,25 +324,15 @@ $$
 \det(H_f) = \frac{1}{x^2 y^2} > 0
 $$
 
-Et $$f_{xx} < 0$$.
+Et $$f_{xx} < 0$$
 
 ### Conclusion
 
-* Hessien **défini négatif**.
+* Hessien **défini négatif**
 * Donc $$f(x,y) = \ln(xy)$$ est **strictement concave** sur  $$x>0,\ y>0$$.
 
 ---
 
-# Résumé clair
-
-| Fonction          | Hessien       | Déterminant | Convexité             |
-| ----------------- | ------------- | ----------- | --------------------- |
-|   3x^2 + y^3 - xy | Dépend de (y) | (36y - 1)   | Convexe si (y > 1/36) |
-| (e^{x+y})         | Semi-défini + | (0)         | Convexe (pas stricte) |
-| (\ln(xy))         | Défini –      | (>0)        | Strictement concave   |
-
-
----
 
 # 8. Exercices
 
