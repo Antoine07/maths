@@ -148,10 +148,7 @@ La fonction décroît puis croît → minimum local en (x=1), maximum local en (
 $$f(x)=\frac{x^2-1}{x} (sur \mathbb{R}\setminus{0})$$
 
 $$
-f'(x)=\frac{2x\cdot x - (x^2-1)\cdot 1}{x^2}
-=
-
-\frac{x^2+1}{x^2}.
+f'(x)=\frac{2x^2 - (x^2 - 1)}{x^2} = \frac{x^2 + 1}{x^2}.
 $$
 
 Comme $$x^2+1>0$$, on obtient :
