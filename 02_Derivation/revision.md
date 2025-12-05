@@ -163,7 +163,7 @@ La fonction est **strictement croissante** sur chaque intervalle de son domaine.
 
 ## Exemple 3 : Composition
 
-$$(f(x) = e^{3x})$$
+$$f(x) = e^{3x}$$
 
 $$
 f'(x) = 3 e^{3x}.
