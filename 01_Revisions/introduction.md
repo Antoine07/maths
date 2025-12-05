@@ -121,25 +121,35 @@ $$
 
 Règles fondamentales :
 
-1. $$
+1.
+
+$$
    a^m \cdot a^n = a^{m+n}
-   $$
+$$
 
-2. $$
+3.
+
+$$
    \frac{a^m}{a^n} = a^{m-n}
-   $$
+$$
 
-3. $$
+5. 
+
+$$
    (a^m)^n = a^{mn}
-   $$
+$$
 
-4. $$
+7.
+
+$$
    (a b)^n = a^n b^n
-   $$
+$$
 
-5. $$
+9.
+
+$$
    \left(\frac{a}{b}\right)^n = \frac{a^n}{b^n}
-   $$
+$$
 
 Exemple :
 
@@ -173,21 +183,21 @@ $$
 
 # 7. Logarithmes (règles essentielles)
 
-1. $$
+$$
    \ln(ab)=\ln a + \ln b
-   $$
+$$
 
-2. $$
+$$
    \ln\left(\frac{a}{b}\right)=\ln a - \ln b
-   $$
+$$
 
-3. $$
+$$
    \ln(a^n) = n\ln a
-   $$
+$$
 
-4. $$
+$$
    e^{\ln(a)} = a \quad (a>0)
-   $$
+$$
 
 Exemples :
 
@@ -242,13 +252,13 @@ $$
 
 ## Exercice 1 : Développer
 
-a) ((2x-3)(x+4))
-b) ((x+5)^2)
+a) $$(2x-3)(x+4)$$
+b) $$(x+5)^2$$
 
 ## Exercice 2 : Factoriser
 
-a) (4x^2 - 9)
-b) (x^2 - 6x + 9)
+a) $$4x^2 - 9$$
+b) $$x^2 - 6x + 9$$
 
 ## Exercice 3 : Simplifier
 
@@ -268,8 +278,8 @@ $$
 
 Simplifier :
 
-a) (\ln(8x))
-b) (\ln(x^3))
+a) $$\ln(8x)$$
+b) $$\ln(x^3)$$
 
 ## Exercice 6 : Équation
 
