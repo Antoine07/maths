@@ -69,7 +69,7 @@ $$
 
 ---
 
-# 3. Dérivée directionnelle (idée simple)
+# 3. Dérivée directionnelle
 
 On peut dériver dans **n'importe quelle direction** $$((u_1,u_2))$$.
 
@@ -106,13 +106,13 @@ f(x,y)=x^2+y^2
 \nabla f = (2x, 2y).
 $$
 
-Au point ((1,1)), le gradient vaut ((2,2)) : la fonction augmente le plus rapidement vers la diagonale.
+Au point (1,1), le gradient vaut (2,2) : la fonction augmente le plus rapidement vers la diagonale.
 
 ---
 
 # 5. Point critique
 
-Un point critique d'une fonction à deux variables est un point où ( c'est classique ) :
+Un point critique d'une fonction à deux variables est un point où :
 
 $$
 \nabla f(x,y) = (0,0)
@@ -126,7 +126,7 @@ f(x,y)=x^2+y^2
 \nabla f = (2x,2y).
 $$
 
-Le seul point critique est ((0,0)).
+Le seul point critique est (0,0).
 
 ---
 
@@ -158,38 +158,188 @@ Cette matrice sert à déterminer :
 
 # 7. Exemples corrigés
 
-### Exemple 1
+Vous avez les dérivées partielles premières, mais pour parler de **Hessien** et donc de **convexité/concavité en dimension 2**, il faut aller jusqu'aux dérivées secondes.
+
+Voici une présentation claire et complète pour chacun des trois exemples.
+
+---
+
+# **Rappel essentiel : Hessien et convexité**
+
+Pour une fonction f(x,y), le **Hessien** est :
 
 $$
-f(x,y)=3x^2 + y^3 - xy.
+H_f(x,y)=
+\begin{pmatrix}
+f_{xx} & f_{xy} \
+f_{yx} & f_{yy}
+\end{pmatrix}
 $$
 
-$$
-f_x=6x - y,
-\qquad
-f_y=3y^2 - x.
-$$
+Critères :
 
-### Exemple 2
+1. Si le Hessien est **défini positif** → ( f ) est **strictement convexe**.
+1. Si le Hessien est **défini négatif** → ( f ) est **strictement concave**.
+1. Si le Hessien est **indéfini** → ni convexe ni concave.
+1. Si semi-défini → convexité faible.
 
-$$
-f(x,y)=e^{x+y}.
-$$
+Pour un Hessien ( 2 \times 2 ) :
 
-$$
-f_x=e^{x+y}, \qquad f_y=e^{x+y}.
-$$
+1. Positif si : $$f_{xx} > 0$$ et $$\det(H_f) > 0$$
+1. Négatif si : $$f_{xx} < 0$$ et $$\det(H_f) > 0$$
+1. Indéfini si : $$\det(H_f) < 0$$
 
-### Exemple 3
+---
 
-$$
-f(x,y)=\ln(xy)
-\quad (x>0, y>0).
-$$
+# **Exemple 1**
 
 $$
-f_x = \frac{1}{x}, \qquad f_y=\frac{1}{y}.
+f(x,y) = 3x^2 + y^3 - xy
 $$
+
+### Dérivées partielles premières
+
+Déjà données :
+
+$$
+f_x = 6x - y, \qquad f_y = 3y^2 - x
+$$
+
+### Dérivées secondes
+
+$$
+f_{xx} = 6,\quad f_{yy} = 6y,\quad f_{xy} = f_{yx} = -1
+$$
+
+### Hessien
+
+$$
+H_f(x,y) =
+\begin{pmatrix}
+6 & -1 \
+-1 & 6y
+\end{pmatrix}
+$$
+
+### Déterminant
+
+$$
+\det(H_f) = 6 \cdot 6y - 1 = 36y - 1
+$$
+
+### Analyse
+
+* Si $$y > \frac{1}{36}$$, alors $$\det(H_f) > 0$$ et $$f_{xx} = 6 > 0$$ ⇒ **Hessien défini positif** ⇒ **fonction convexe** dans cette région.
+* Si $$y < \frac{1}{36}$$ ⇒ Hessien indéfini ⇒ **ni convexe ni concave**.
+* Si $$y = \frac{1}{36}$$ ⇒ passage limite (semi-défini).
+
+➡️ Convexité **selon la zone du plan**, non globale.
+
+---
+
+# **Exemple 2**
+
+$$
+f(x,y) = e^{x+y}
+$$
+
+### Dérivées partielles premières
+
+Déjà données :
+
+$$
+f_x = e^{x+y},\quad f_y = e^{x+y}
+$$
+
+### Dérivées secondes
+
+$$
+f_{xx} = e^{x+y},\quad f_{yy} = e^{x+y},\quad f_{xy} = e^{x+y}
+$$
+
+### Hessien
+
+$$
+H_f(x,y) =
+e^{x+y}
+\begin{pmatrix}
+1 & 1 \
+1 & 1
+\end{pmatrix}
+$$
+
+### Déterminant
+
+$$
+\det(H_f) = e^{2(x+y)}(1\cdot 1 - 1\cdot 1) = 0
+$$
+
+Le Hessien est **semi-défini positif** (matrice positive mais de rang 1).
+
+### Conclusion
+
+$$f(x,y) = e^{x+y}$$ est :
+
+* **Convexe** (car exponentielle d'une fonction affine).
+* **Pas strictement convexe** car le Hessien n'est pas strictement positif (déterminant nul).
+
+---
+
+# **Exemple 3**
+
+$$
+f(x,y) = \ln(xy),\quad x>0,\ y>0
+$$
+
+### Dérivées partielles premières
+
+Déjà données :
+
+$$
+f_x = \frac{1}{x},\quad f_y = \frac{1}{y}
+$$
+
+### Dérivées secondes
+
+$$
+f_{xx} = -\frac{1}{x^2},\quad
+f_{yy} = -\frac{1}{y^2},\quad
+f_{xy} = 0
+$$
+
+### Hessien
+
+$$
+H_f(x,y) =
+\begin{pmatrix}
+-\frac{1}{x^2} & 0 \
+0 & -\frac{1}{y^2}
+\end{pmatrix}
+$$
+
+### Déterminant
+
+$$
+\det(H_f) = \frac{1}{x^2 y^2} > 0
+$$
+
+Et $$f_{xx} < 0$$.
+
+### Conclusion
+
+* Hessien **défini négatif**.
+* Donc $$f(x,y) = \ln(xy)$$ est **strictement concave** sur  $$x>0,\ y>0$$.
+
+---
+
+# Résumé clair
+
+| Fonction          | Hessien       | Déterminant | Convexité             |
+| ----------------- | ------------- | ----------- | --------------------- |
+|   3x^2 + y^3 - xy | Dépend de (y) | (36y - 1)   | Convexe si (y > 1/36) |
+| (e^{x+y})         | Semi-défini + | (0)         | Convexe (pas stricte) |
+| (\ln(xy))         | Défini –      | (>0)        | Strictement concave   |
+
 
 ---
 
