@@ -8,9 +8,9 @@ $$
 
 Exemples :
 
-* $$(f(x,y)=x^2+y^2)$$
-* $$(f(x,y)=\frac{x}{y})$$
-* $$(f(x,y)=e^{x+y})$$
+* $$f(x,y)=x^2+y^2$$
+* $$f(x,y)=\frac{x}{y}$$
+* $$f(x,y)=e^{x+y}$$
 
 Ce type de fonction apparaît dans :
 
@@ -29,7 +29,7 @@ Une fonction (f(x,y)) peut être représentée :
 2. Avec des **courbes de niveau**, lignes où (f(x,y)=k).
 
 Exemple :
-Pour (f(x,y)=x^2+y^2), les courbes de niveau sont des cercles.
+Pour $$f(x,y)=x^2+y^2$$, les courbes de niveau sont des cercles.
 
 ---
 
@@ -75,9 +75,10 @@ On peut dériver dans **n'importe quelle direction** $$((u_1,u_2))$$.
 
 L'idée intuitive :
 
-* (f_x) = variation selon l'axe (x)
-* (f_y) = variation selon l'axe (y)
-* dérivée directionnelle = combinaison des deux
+$$f_x=$$ variation selon l'axe (x)
+$$f_y=$$ variation selon l'axe (y)
+
+dérivée directionnelle = combinaison des deux
 
 ---
 
@@ -95,7 +96,7 @@ $$
 
 Rôle essentiel :
 
-> Le gradient pointe vers la direction où la fonction augmente le plus vite.
+> Le gradient pointe vers la direction où la fonction augmente le plus vite, c'est très important dans tout problème de data de préciser une tendance.
 
 Exemple :
 
@@ -111,10 +112,10 @@ Au point ((1,1)), le gradient vaut ((2,2)) : la fonction augmente le plus rapide
 
 # 5. Point critique
 
-Un point critique d'une fonction à deux variables est un point où :
+Un point critique d'une fonction à deux variables est un point où ( c'est classique ) :
 
 $$
-\nabla f(x,y) = (0,0).
+\nabla f(x,y) = (0,0)
 $$
 
 Exemple :
@@ -129,7 +130,7 @@ Le seul point critique est ((0,0)).
 
 ---
 
-# 6. Dérivées secondes et Hessienne (idée simple)
+# 6. Dérivées secondes et Hessienne 
 
 On définit :
 
@@ -152,8 +153,6 @@ Cette matrice sert à déterminer :
 * minimum local,
 * maximum local,
 * point selle.
-
-Mais pour l'instant, on reste sur les dérivées partielles.
 
 ---
 
