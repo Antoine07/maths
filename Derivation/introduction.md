@@ -2,8 +2,8 @@
 
 ## 1. Définition intuitive de la dérivée
 
-La dérivée d’une fonction (f) en un point (x) mesure **la pente de la courbe** de (f) à ce point.
-On l’interprète comme la vitesse de variation :
+La dérivée d'une fonction (f) en un point (x) mesure **la pente de la courbe** de (f) à ce point.
+On l'interprète comme la vitesse de variation :
 
 $$
 f'(x) = \text{pente de la tangente au point } x.
@@ -173,7 +173,7 @@ Toujours positif → fonction strictement croissante.
 
 ---
 
-# 7. Exercices d’entraînement
+# 7. Exercices d'entraînement
 
 ## Exercice 1
 
