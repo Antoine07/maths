@@ -2,6 +2,66 @@
 
 ---
 
+# Introduction 
+
+D'où viennent les équations ou matrices
+
+## **Dimension 1 : décroissance simple**
+
+On modélise une quantité qui diminue de 20 % à chaque période
+(population, prix, signal…).
+
+Relation réelle :
+
+$$
+x_{\text{nouveau}} = 0.8 , x_{\text{ancien}}
+$$
+
+Ici :
+
+1. le coefficient **0.8** exprime une perte de 20 %,
+1. la « transformation » est simplement **une matrice 1×1** :
+  $$
+  [0.8]
+  $$
+
+Ce modèle dit juste : *chaque période, on garde 80 % de la valeur précédente*.
+
+---
+
+# Dimension 2 : industrie et services
+
+Deux secteurs se stimulent mutuellement :
+
+1. l'industrie génère +0.7 de nouvelle industrie et +0.1 de services,
+1. les services génèrent +0.2 d'industrie et +0.8 de services.
+
+Alors :
+
+$$
+\begin{pmatrix}
+\text{Ind}*{n+1} \\
+\text{Serv}*{n+1}
+\end{pmatrix}
+=
+
+\begin{pmatrix}
+0.7 & 0.1 \\
+0.2 & 0.8
+\end{pmatrix}
+\begin{pmatrix}
+\text{Ind}_n \\
+\text{Serv}_n
+\end{pmatrix}
+$$
+
+La matrice traduit simplement :
+
+1. comment **chaque secteur influence l'autre**,
+1. et comment chacun **s'auto-alimente**.
+
+
+
 ## I. Vecteurs et matrices
 
 ### 1. Vecteurs
