@@ -117,6 +117,16 @@ $$
 
 Au point (1,1), le gradient vaut (2,2) : la fonction augmente le plus rapidement vers la diagonale.
 
+Même si certaines composantes du gradient peuvent être négatives ailleurs, cela indique simplement que l'augmentation maximale se produit dans une direction dont certaines coordonnées diminuent ; le gradient reste toujours la direction de montée maximale, c'est avant tout un vecteur !
+
+# **Rôle essentiel :**
+
+Le gradient pointe vers la direction où la fonction augmente le plus vite.
+C'est un **vecteur local** : il décrit le comportement de la fonction uniquement au point où il est calculé.
+La **direction et le sens** du gradient indiquent comment les coordonnées doivent varier pour que la fonction croisse, tandis que sa **norme** mesure à quelle vitesse elle augmente dans cette direction.
+
+<img src="./images/gradient.png" width="800" />
+
 ---
 
 # 5. Point critique

@@ -213,3 +213,4 @@ $$
 f(2{,}1,; 0{,}95)
 $$
 et comparez les deux résultats.
+
