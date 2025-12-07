@@ -2,25 +2,29 @@
 
 ## **Plan**
 
-### **1. Dérivation**
+### **Révisions**
 
-#### 1.1 Introduction
+Des exercices très simples.
+
+### **Dérivation*
+
+#### Introduction
 
 Premières notions sur la dérivée, pente, sens de variation.
 
-#### 1.2 Étude de fonctions
+#### Étude de fonctions
 
 Techniques : dérivée, tableau de variation, extremums, convexité.
 
-#### 1.3 Gradient
+#### Gradient
 
 Généralisation multivariée, interprétation géométrique.
 
-#### 1.4 Convexité — généralisation
+#### Convexité — généralisation
 
 Hessienne, convexité locale, points selle.
 
-#### 1.5 TPs
+#### TPs
 
 Applications avec NumPy, tracés, API FastAPI.
 
@@ -29,9 +33,9 @@ Applications avec NumPy, tracés, API FastAPI.
 
 ---
 
-### **2. Matrices**
+### **Matrices**
 
-#### 2.1 Introduction
+#### Introduction
 
 Définitions, opérations, interprétation linéaire.
 
