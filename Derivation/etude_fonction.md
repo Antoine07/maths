@@ -221,17 +221,16 @@ En un point d'intérêt.
 
 # Exercices 
 
-## Exercice 1 — Limites et asymptotes
+## Limites et asymptotes
 
 Étudier les limites et asymptotes éventuelles de :
 
 a) $$f(x)=\frac{2x+1}{x-3}$$
 b) $$g(x)=3 + \frac{1}{x^2}$$
-c) $$h(x)=x + \frac{4}{x}$$
 
 ---
 
-## Exercice 2 — Continuité et dérivabilité
+## Continuité et dérivabilité
 
 Étudier la continuité et la dérivabilité de :
 
@@ -243,20 +242,9 @@ x^2 & x\ge 1
 \end{cases}
 $$
 
----
+--
 
-## Exercice 3 — Tableau de variations complet
-
-Étudier $$f(x)=x^3 - 6x$$ 
-
-1. Limites $$\pm \infty$$
-2. Dérivée
-3. Signe de la dérivée
-4. Tableau de variation
-
----
-
-## Exercice 4 — Convexité
+## Convexité
 
 Étudier la convexité de :
 
@@ -266,15 +254,12 @@ c) $$h(x)=\ln(x)$$
 
 ---
 
-## Exercice 5 — Tangente et approximation
+## Exercice 5 
 
-Pour $$f(x)=\sqrt{x+4}$$ 
+Etudiez cette fonction avec ce que nous avons déjà vu ensemble.
 
-Trouver la tangente en (x=0) et comparer numériquement (via NumPy) :
+$$f(x)=\sqrt{x+4}$$ 
 
-$$
-f(x)\approx f(0)+f'(0)x
-$$
 
 ---
 
@@ -372,9 +357,9 @@ Voir un exemple complet à tester dans un Notebook
 
 Étudier numériquement la fonction :
 
-[
+$$
 f(x) = x^4 - 2x^2 + 3
-]
+$$
 
 Travail demandé :
 
@@ -392,9 +377,9 @@ Travail demandé :
 
 Tracer sur un même graphique :
 
-[
+$$
 f(x)=e^{x}, \qquad f''(x)=e^{x}.
-]
+$$
 
 Questions :
 
@@ -408,9 +393,9 @@ Questions :
 
 Étudier :
 
-[
+$$
 f(x)=\sin(x) - 0.1x
-]
+$$
 
 1. Tracer f, f' et f''.
 2. Repérer les points où f'=0 (maximums locaux).
@@ -422,9 +407,9 @@ f(x)=\sin(x) - 0.1x
 
 Fonction :
 
-[
+$$
 f(x)=\log(x)
-]
+$$
 
 Travail :
 
@@ -439,32 +424,11 @@ Travail :
 
 Étudier :
 
-[
+$$
 f(x)=x e^{-x}
-]
+$$
 
 1. Tracer f.
 2. Calculer f' numériquement.
 3. Repérer la zone où f est le plus sensible (dérivée la plus grande en valeur absolue).
 4. Interpréter.
-
----
-
-# 💡 **Pourquoi ces exercices sont importants pour une filière data ?**
-
-Parce qu'ils introduisent très tôt ce que les étudiants verront dans :
-
-* optimisation (descente de gradient),
-* traitement du signal (bruit, dérivation),
-* machine learning (surfaces de perte),
-* modélisation mathématique.
-
-NumPy devient alors un **outil de validation visuelle**, ce qui forme de meilleures intuitions qu'une étude purement symbolique.
-
----
-
-Si tu veux, je peux te préparer :
-
-✅ Un **Notebook Jupyter complet** avec les corrections
-ou
-✅ Une **séance avec FastAPI** pour générer automatiquement les graphiques des études de fonctions.
