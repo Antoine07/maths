@@ -1,45 +1,28 @@
 # **Cours de maths CODA**
 
-## **Plan**
+### [**Révisions**](https://antoine07.github.io/maths/revision.html) - .5 jour
 
-### **Révisions**
+### [**Dérivation 01**](https://antoine07.github.io/maths/01_derivation.html) .75 jour
 
-Des exercices très simples.
+### [**Dérivation 02**](https://antoine07.github.io/maths/02_derivation.html) .75 jour
 
-### **Dérivation**
+### [**Matrices**](https://antoine07.github.io/maths/calcul_matriciel.html) .75 jour
+### [**Matrices**](https://antoine07.github.io/maths/matrice.html) .75 jour
 
-#### Introduction
+### **Statistiques introduction** .25 jour
 
-Premières notions sur la dérivée, pente, sens de variation.
+### **ACP** .25 jour
 
-#### Étude de fonctions
-
-Techniques : dérivée, tableau de variation, extremums, convexité.
-
-#### Gradient
-
-Généralisation multivariée, interprétation géométrique.
-
-#### Convexité — généralisation
-
-Hessienne, convexité locale, points selle.
-
-#### TPs
-
-Applications avec NumPy, tracés, API FastAPI.
-
-1. [généralités](./Derivation/TPs/01_TP_general.md)
-1. [généralités](./Derivation/TPs/02_TP_temperature.md)
+### **TP final**  1 jour
 
 ---
 
-### **Matrices**
+#### TPs dans le cours
 
-#### Introduction
+Applications avec NumPy, tracés, API FastAPI.
 
-Définitions, opérations, interprétation linéaire.
+1. [généralités](https://github.com/Antoine07/maths/tree/main/Derivation/TPs/01_TP_general.md)
+1. [généralités](https://github.com/Antoine07/maths/tree/main/Derivation/TPs/02_TP_temperature.md)
+1. [TP final] ?
 
-#### 2.2 Calcul matriciel
-
-Produit matriciel, déterminant, système linéaire simple, premiers exemples.
-
+## [Retour au plan](https://antoine07.github.io/maths/)
