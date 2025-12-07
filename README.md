@@ -6,7 +6,7 @@
 
 Des exercices très simples.
 
-### **Dérivation*
+### **Dérivation**
 
 #### Introduction
 
