@@ -387,21 +387,7 @@ Questions :
 2. Que conclure sur la convexité ?
 3. Pourquoi cette fonction n'a-t-elle pas de minimum ?
 
----
 
-#**Exercice NumPy 3 — Étude d'une fonction oscillante**
-
-Étudier :
-
-$$
-f(x)=\sin(x) - 0.1x
-$$
-
-1. Tracer f, f' et f''.
-2. Repérer les points où f'=0 (maximums locaux).
-3. Expliquer pourquoi la fonction finit par décroître sur (\mathbb{R}).
-
----
 
 #**Exercice NumPy 4 — Comparaison analytique / numérique**
 
