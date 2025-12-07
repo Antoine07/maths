@@ -676,6 +676,57 @@ Questions :
 
 ---
 
+## **Approximation locale d'une fonction**
+
+Autour d'un point ((x,y)), une fonction à deux variables peut être **approchée linéairement** grâce à son gradient.
+Pour de petites variations ((dx, dy)), on a l'approximation :
+
+$$
+f(x+dx,, y+dy)
+;\approx;
+f(x,y)
++
+\nabla f(x,y)\cdot
+\begin{pmatrix}
+dx\
+dy
+\end{pmatrix}.
+$$
+
+Autrement dit :
+
+> **près d’un point, la fonction ressemble à son plan tangent**,
+> et le gradient en donne la pente.
+
+### **Exemple**
+
+Pour
+$$
+f(x,y)=x^2+2y,
+\quad
+\nabla f(x,y)=(2x,,2),
+$$
+au point ((1,2)) et pour $$(dx,dy)=(0.1,-0.05)$$:
+
+* approximation linéaire :
+  $$
+  \Delta f_{\text{approx}}
+  =
+  (2,2)\cdot (0.1,,-0.05)
+  = 0.2 - 0.1 = 0.1,
+  $$
+
+* variation réelle :
+  $$
+  f(1.1,1.95)-f(1,2)
+  = (1.1^2+2\cdot1.95) - (1^2+4)
+  = 0.1025.
+  $$
+
+Les deux valeurs sont très proches :
+
+> **la variation locale de la fonction est bien prédite par le gradient.**
+
 # **Contexte Machine Learning**
 
 Répondre aux questions suivantes :

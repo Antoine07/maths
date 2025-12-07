@@ -220,3 +220,16 @@ a) $$f(x)=x^4$$
 b) $$g(x)=x e^x$$
 
 c) $$h(x)=\ln(x)$$
+
+## Exercice 5
+
+Mettez en place un environnement de production pour faire les TP du cours avec FastAPI, Numpy et Pandas.
+
+Voyez ce fichier pour l'installation : [installation](../installation.md)
+
+Testez ce code et expliquez ce qu'il fait exactement.
+
+```python
+noise = np.random.normal(loc=0.0, scale=0.5, size=t.size)
+T_raw = 10 + 5 * np.sin((2*np.pi/24)*t) + noise
+```

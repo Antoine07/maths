@@ -98,23 +98,51 @@ Vous pouvez sinon utiliser le docker-compose suivant
 services:
 
   jupyter:
-      image: jupyter/base-notebook:latest
-      environment:
-        JUPYTER_ENABLE_LAB: "yes"
-        GRANT_SUDO: "yes"
-        PYTHONPATH: "/home/jovyan/work/src"
-      user: root
-      ports:
-        - "8880:8888"
-      volumes:
-        - ./project:/home/jovyan/work
-      command: >
-        bash -c "
-        pip install -r /home/jovyan/work/config/requirements.txt &&
-        start-notebook.sh --NotebookApp.token='' --NotebookApp.password=''"
-      restart: always
-      depends_on:
-        postgres:
-          condition: service_healthy
+    image: jupyter/base-notebook:latest
+    environment:
+      JUPYTER_ENABLE_LAB: "yes"
+      GRANT_SUDO: "yes"
+      PYTHONPATH: "/home/jovyan/work/src"
+    user: root
+    ports:
+      - "8880:8888"
+      - "8000:8000"
+    volumes:
+      - ./project:/home/jovyan/work
+    working_dir: /home/jovyan/work
+    command: >
+      bash -c "
+      pip install -r /home/jovyan/work/config/requirements.txt &&
+      start-notebook.sh --NotebookApp.token='' --NotebookApp.password=''
+      "
+    restart: always
+
+  fastapi:
+    image: jupyter/base-notebook:latest
+    user: root
+    ports:
+      - "8001:8000"
+    volumes:
+      - ./project:/home/jovyan/work
+    working_dir: /home/jovyan/work/src
+    command: >
+      bash -c "
+      pip install -r /home/jovyan/work/config/requirements.txt &&
+      uvicorn main:app --host 0.0.0.0 --port 8000 --reload
+      "
+    restart: always
+```
+
+Fichier `requirements.txt`
+
+```txt
+numpy
+sympy
+matplotlib
+scipy
+pandas
+fastapi
+uvicorn
+python-multipart
 ```
 
