@@ -24,6 +24,9 @@ Hessienne, convexité locale, points selle.
 
 Applications avec NumPy, tracés, API FastAPI.
 
+1. [généralités](./Derivation/TPs/01_TP_general.md)
+1. [généralités](./Derivation/TPs/02_TP_temperature.md)
+
 ---
 
 ### **2. Matrices**
