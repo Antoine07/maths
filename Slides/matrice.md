@@ -453,7 +453,7 @@ $$
 Et comme (P) est inversible :
 
 $$
-A = P D P^{-1}.
+A = P D P^{-1}
 $$
 
 ---
@@ -461,7 +461,11 @@ $$
 # Résumé
 
 > On diagonalise une matrice en construisant la base de ses vecteurs propres : dans cette base, la matrice devient diagonale, ce qui donne
-> $$A = P D P^{-1}$$.
+
+
+$$
+A = P D P^{-1}
+$$
 
 
 ---
@@ -500,7 +504,7 @@ Diagonaliser, c'est trouver les axes naturels du problème.
 
 ---
 
-## Une remarque en statistiques
+## Remarque en statistiques
 
 La covariance mesure comment deux variables varient ensemble : positive si elles montent ou descendent ensemble, négative si l'une monte quand l'autre descend.
 
@@ -510,6 +514,144 @@ La matrice de covariance est diagonalisée :
 
 
 > **(A) et (D) font la même chose : (A) le fait dans la base normale, (D) le fait dans la base des vecteurs propres où tout est plus simple.**
+
+---
+
+
+# Inverse d'une matrice : méthode de la matrice augmentée
+
+Une matrice (A) est inversible s'il existe $$(A^{-1})$$ tel que :
+
+$$
+A A^{-1} = I.
+$$
+
+Pour trouver (A^{-1}), on utilise **la matrice augmentée** :
+
+$$
+(A \mid I),
+$$
+
+et on applique des opérations élémentaires pour transformer :
+
+$$
+(A \mid I) ;\longrightarrow; (I \mid A^{-1}).
+$$
+
+---
+
+## Exemple 
+
+Soit
+
+$$
+A=
+\begin{pmatrix}
+2 & 1\\
+1 & 1
+\end{pmatrix}.
+$$
+
+On forme :
+
+$$
+\left(
+\begin{array}{cc|cc}
+2 & 1 & 1 & 0\\
+1 & 1 & 0 & 1
+\end{array}
+\right).
+$$
+
+Étape 1 : rendre le pivot en haut à gauche égal à 1 (on échange les lignes) :
+
+$$
+\left(
+\begin{array}{cc|cc}
+1 & 1 & 0 & 1\\
+2 & 1 & 1 & 0
+\end{array}
+\right).
+$$
+
+---
+
+Étape 2 : annuler la deuxième ligne, première colonne :
+
+L2 ← L2 – 2 L1
+
+$$
+\left(
+\begin{array}{cc|cc}
+1 & 1 & 0 & 1\\
+0 & -1 & 1 & -2
+\end{array}
+\right).
+$$
+
+---
+
+Étape 3 : normaliser la deuxième ligne
+
+L2 ← –L2
+
+$$
+\left(
+\begin{array}{cc|cc}
+1 & 1 & 0 & 1\\
+0 & 1 & -1 & 2
+\end{array}
+\right).
+$$
+
+---
+
+Étape 4 : annuler le 1 au-dessus (colonne 2)
+
+L1 ← L1 – L2
+
+$$
+\left(
+\begin{array}{cc|cc}
+1 & 0 & 1 & -1\\
+0 & 1 & -1 & 2
+\end{array}
+\right).
+$$
+
+Résultat :
+
+$$
+A^{-1}=
+\begin{pmatrix}
+1 & -1\\
+-1 & 2
+\end{pmatrix}.
+$$
+
+---
+
+# Vérification
+
+$$
+A A^{-1} =
+\begin{pmatrix}
+2 & 1\\
+1 & 1
+\end{pmatrix}
+\begin{pmatrix}
+1 & -1\\
+-1 & 2
+\end{pmatrix}
+=
+
+\begin{pmatrix}
+1 & 0\\
+0 & 1
+\end{pmatrix}.
+$$
+
+L'inverse est correctement trouvé.
 
 
 ---
@@ -572,8 +714,19 @@ A=
 \end{pmatrix},
 $$
 
-1. Montrer que $$v = (1,0)^T$$ est un vecteur propre.
-2. Trouver $$\lambda$$
+1. Montrer que 
+
+$$
+v = (1,0)^T
+$$
+
+est un vecteur propre.
+2. Trouver 
+
+$$
+\lambda
+$$
+
 3. Trouver un autre vecteur propre évident.
 
 ---
@@ -590,6 +743,22 @@ A=
 \end{pmatrix}.
 $$
 
+---
+
+## Exercice 4 — Inverse par matrice augmentée
+
+Utiliser exclusivement la méthode de Gauss-Jordan pour trouver l'inverse.
+
+$$
+A=
+\begin{pmatrix}
+1 & 2\\
+3 & 4
+\end{pmatrix}.
+$$
+
+---
+
 ## Application - Trouvez les vecteurs propres
 
 Utilisez Python pour trouver les vecteurs propres de la matrice suivante:
@@ -602,6 +771,8 @@ A=
 1 & 0 & 2\\
 \end{pmatrix}.
 $$
+
+---
 
 Testez le programme suivant
 
@@ -688,6 +859,12 @@ Cela décrit une **relation opposée** :
 1. les cellules tumorales diminuent (et inversement).
 
 → **Comportement secondaire**, opposé des dynamiques.
+
+---
+
+# TP dynamique économique
+
+[Dynamique économique](https://github.com/Antoine07/maths/tree/main/Derivation/TPs/TP_dynamique_eco.md)
 
 ---
 
