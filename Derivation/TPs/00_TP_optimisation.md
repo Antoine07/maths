@@ -1,57 +1,39 @@
-# TP Optimisation 
+## Problème de data — Modéliser la croissance d'une audience sur un réseau social
 
-## Problème : optimisation d'un coût de production (maths + data + Python)
+Une influenceuse observe le nombre d'abonnés à son compte chaque mois.
+Les données montrent une croissance rapide au début, puis un ralentissement.
 
-Une entreprise produit un bien.
-Pour un niveau de production x (en milliers d'unités), son coût total est modélisé par :
-
-$$
-C(x) = 40x + 2000 - 500 e^{-0.5x}
-$$
-
-(1) Le terme 40x : coût linéaire.
-(2) Le terme 2000 : coût fixe.
-(3) Le terme 
+Un modèle simple utilisé en data est :
 
 $$
--500 e^{-0.5x}
+A(t) = 1000\ln(t+1),
+\qquad t \ge 0
 $$
 
-Apprentissage => plus on produit, plus on devient efficace, donc le coût baisse au début, mais cet effet s'atténue.
+où :
+	•	t = temps en mois,
+	•	A(t) = nombre d'abonnés prédits par le modèle.
 
-On veut répondre à une question data très courante :
-Quel niveau de production minimise le coût moyen par unité ?
-En effet, une entreprise cherche non pas seulement à réduire le coût total, mais surtout à réduire le coût par produit.
+Cette fonction représente une croissance qui ralentit progressivement, phénomène très courant en data.
 
 ---
 
-1. Étude mathématique
+1. Questions mathématiques
 
-On étudie la fonction coût moyen :
+a) Étudier le signe de la dérivée de A(t)
 
-$$
-M(x) = \frac{C(x)}{x}
-= 40 + \frac{2000}{x} - 500\frac{e^{-0.5x}}{x}.
-$$
-
-Objectif : trouver le minimum de M(x).
-
-a) Domaine
-
-x>0.
+A(t)=1000\ln(t+1)
 
 ---
 
-2. Dérivée de M(x) pour justifiez si il existe un nimimum.
+b) Étudier A''(t) pour comprendre la dynamique
 
-   2.1 Créez une fonction en Python pour trouver cette valeur si elle existe, utilisez la fonction `np.argmin` de Numpy.
+Interprétez
 
-```python
-def M(x):
-   pass
-xs = np.linspace(0.1, 50, 10000)
-Ms = M(xs)
-```
+---
 
-3. Donnez la production optimal
+2. Question data : À quel moment la croissance devient-elle “lentement significative” ?
 
+On considère qu'un mois est "faiblement intéressant" si le compte gagne moins de 50 abonnés.
+
+---
