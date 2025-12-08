@@ -22,7 +22,9 @@ Cette fonction représente une croissance qui ralentit progressivement, phénom�
 
 a) Étudier le signe de la dérivée de A(t)
 
+$$
 A(t)=1000\ln(t+1)
+$$
 
 ---
 
