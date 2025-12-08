@@ -44,7 +44,7 @@ x>0.
 
 2. Dérivée de M(x) pour justifiez si il existe un nimimum.
 
-2.1 Créez une fonction en Python pour trouver cette valeur si elle existe, utilisez la fonction `np.argmin` de Numpy.
+   2.1 Créez une fonction en Python pour trouver cette valeur si elle existe, utilisez la fonction `np.argmin` de Numpy.
 
 ```python
 def M(x):
