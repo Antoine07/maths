@@ -14,8 +14,10 @@ class: lead
 
 ### [**Dérivation 02**](https://antoine07.github.io/maths/02_derivation.html) .75 jour
 
-### [**Matrices**](https://antoine07.github.io/maths/calcul_matriciel.html) .75 jour
-### [**Matrices**](https://antoine07.github.io/maths/matrice.html) .75 jour
+### [**Gradient**](https://antoine07.github.io/maths/gradient.html)
+
+### [**Calcul matriciel**](https://antoine07.github.io/maths/calcul_matriciel.html) .75 jour
+### [**Valeurs propres**](https://antoine07.github.io/maths/matrice.html) .75 jour
 
 ### **Statistiques introduction** .25 jour
 
@@ -28,9 +30,9 @@ class: lead
 #### TPs dans le cours
 
 Applications avec NumPy, tracés, API FastAPI.
-
-1. [généralités](https://github.com/Antoine07/maths/tree/main/Derivation/TPs/01_TP_general.md)
-1. [généralités](https://github.com/Antoine07/maths/tree/main/Derivation/TPs/02_TP_temperature.md)
+1. [abonnées](https://github.com/Antoine07/maths/tree/main/Derivation/TPs/00_TP_optimisation.md)
+1. [Saturation numérique](https://github.com/Antoine07/maths/tree/main/Derivation/TPs/01_saturation_numerique.md)
+1. [Température](https://github.com/Antoine07/maths/tree/main/Derivation/TPs/02_TP_temperature.md)
 1. [TP final] ?
 
 ## [Retour au plan](https://antoine07.github.io/maths/)

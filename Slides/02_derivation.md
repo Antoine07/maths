@@ -46,8 +46,8 @@ $$
 
 Elles permettent de repérer :
 
-* les **asymptotes verticales**,
-* les **discontinuités**.
+1. les **asymptotes verticales**,
+1. les **discontinuités**.
 
 Exemple :
 
@@ -110,6 +110,72 @@ $$
 
 ---
 
+Pour une fonction `f(x)`, on recherche une asymptote oblique de la forme :
+
+$$
+y = ax + b.
+$$
+
+---
+
+## **Calculer la pente (a)**
+
+$$
+a = \lim_{x\to+\infty} \frac{f(x)}{x}
+$$
+
+1. Si cette limite existe et est **finie**, il y a potentiellement une asymptote oblique.
+1. Si (a = 0) → asymptote horizontale.
+1. Si la limite diverge → **pas d'asymptote**.
+
+---
+
+## **Calculer l'ordonnée à l'origine (b)**
+
+$$
+b = \lim_{x\to+\infty} \big(f(x) - ax\big)
+$$
+
+Si (b) existe et est finite:
+  $$
+  y = ax + b \text{ est une asymptote oblique}
+  $$
+
+---
+
+## **Exemple rapide**
+
+Considérons :
+$$
+f(x)=\frac{x^2 + 3x - 1}{x}
+= x + 3 - \frac{1}{x}
+$$
+
+Alors :
+
+1.
+
+$$
+a=\lim_{x\to+\infty} \frac{f(x)}{x} = 1
+$$
+
+---
+
+2.
+
+$$
+b=\lim_{x\to+\infty} (f(x) - x) = 3
+$$
+
+**Asymptote oblique :**
+
+$$
+y = x + 3
+$$
+
+
+---
+
 # Continuité d'une fonction
 
 Une fonction est continue en un point (a) si :
@@ -156,14 +222,6 @@ Ce type de fonction aide à comprendre :
 
 ---
 
-# Tableau de signes (préparation aux variations)
-
-Pour résoudre (f(x)>0), (f(x)<0), etc.
-
-On en a déjà parlé
-
----
-
 #  Tangente à une courbe
 
 Lorsqu'on connaît la dérivée `f'(a)`, l'équation de la tangente à la courbe en (x=a) est :
@@ -194,45 +252,6 @@ Cette formule sera utilisée plus tard pour l'**approximation linéaire**.
 
 ---
 
-# Méthode complète (cette fois) d'étude d'une fonction 
-
-Pour étudier une fonction (méthode standard) :
-
-### Étape 1 — Domaine de définition
-
-Repérer les valeurs interdites.
-
----
-
-### Étape 2 — Limites et asymptotes
-
-Sortie utile à l'infini ou à un point critique.
-
-### Étape 3 — Dérivée
-
-$$
-f'(x)
-$$
-
-### Étape 4 — Étude du signe de (f')
-
-Déterminer les intervalles de croissance/décroissance.
-
-### Étape 5 — Tableau de variation
-
-Présenter clairement les résultats.
-
----
-
-### Étape 6 — Dérivée seconde
-
-Convexité, points d'inflexion.
-
-### Étape 7 — Tangente éventuelle
-
-En un point d'intérêt.
-
----
 
 # Exercices 
 
@@ -253,62 +272,9 @@ $$
 g(x)=3 + \frac{1}{x^2}
 $$
 
----
-
-## Continuité et dérivabilité
-
-Étudier la continuité et la dérivabilité de :
-
-$$
-f(x)=
-\begin{cases}
-x+1 & x<1 \\
-x^2 & x\ge 1
-\end{cases}
-$$
-
---
-
-## Convexité
-
-Étudier la convexité de :
-
-a) $$f(x)=x^4 - x$$
-b) $$g(x)=e^x$$
-c) $$h(x)=\ln(x)$$
 
 ---
 
-## Exercice 5 
-
-Etudiez cette fonction avec ce que nous avons déjà vu ensemble.
-
-$$
-f(x)=\sqrt{x+4}
-$$ 
-
-
----
-
-# Extension NumPy / visualisation
-
-1. échantillonner une fonction :
-
-  ```python
-  x = np.linspace(-5, 5, 400)
-  f = x**3 - 6*x
-  ```
-1. tracer la fonction et sa dérivée :
-
-  ```python
-  f1 = 3*x**2 - 6
-  plt.plot(x, f, label="f")
-  plt.plot(x, f1, label="f'")
-  plt.legend()
-  ```
-1. valider les variations observées graphiquement.
-
----
 
 # **Étude de fonction avec NumPy et Matplotlib**
 
@@ -321,6 +287,8 @@ Même si l'étude de fonction est théorique, les outils numériques sont très 
 
 Pour cela, on utilise :
 
+---
+
 ### **Fonctions NumPy utiles**
 
 | Fonction                          | Rôle                                          |
@@ -331,6 +299,8 @@ Pour cela, on utilise :
 | `np.sin(x), np.exp(x), np.log(x)` | Fonctions usuelles                            |
 | `x**2, x**3`                      | Puissances rapides                            |
 | `np.where(condition)`             | Sélection d'indices                           |
+
+----
 
 ### **Fonctions Matplotlib utiles**
 
@@ -360,6 +330,8 @@ x = np.linspace(a, b, 400)
 f = x**3 - 3*x  # exemple
 ```
 
+---
+
 ### **3. Calculer la dérivée numérique :**
 
 ```python
@@ -379,9 +351,6 @@ Voir un exemple complet à tester dans un Notebook
 
 # **Exercices numériques avec NumPy**
 
-
-#**Étude complète d'une fonction**
-
 Étudier numériquement la fonction :
 
 $$
@@ -395,56 +364,74 @@ Travail demandé :
 3. Tracer les deux courbes.
 4. Repérer graphiquement :
 
-   * les extremums,
-   * les intervalles où f croît / décroît.
+1. les extremums,
+1. les intervalles où f croît / décroît.
 
 ---
 
-#**Exercice NumPy 2 — Convexité**
+# **Méthode de dichotomie**
 
-Tracer sur un même graphique :
-
-$$
-f(x)=e^{x}, \qquad f''(x)=e^{x}.
-$$
-
-Questions :
-
-1. La dérivée seconde est-elle positive ?
-2. Que conclure sur la convexité ?
-3. Pourquoi cette fonction n'a-t-elle pas de minimum ?
-
-
-
-#**Exercice NumPy 4 — Comparaison analytique / numérique**
-
-Fonction :
+La **méthode de dichotomie** permet de trouver numériquement une solution de :
 
 $$
-f(x)=\log(x)
+f(x) = 0
 $$
 
-Travail :
+Elle s'applique lorsque :
 
-1. Calculer la dérivée analytique (f'(x)=1/x),
-2. Calculer la dérivée numérique avec `np.gradient`,
-3. Tracer les deux sur le même graphique,
-4. Expliquer pourquoi l'erreur numérique augmente près de (x=0).
+1. (f) est continue
+1. et (f(a)) et (f(b)) sont de signes opposés
+  $$
+  f(a)\cdot f(b) < 0.
+  $$
 
 ---
 
-#**Exercice NumPy 5 — Sensibilité d'une fonction**
+# 🔎 **Principe**
 
-Étudier :
+1. Choisir un intervalle ([a,b]) où le signe change.
+2. Calculer le milieu :
+   $$
+   m = \frac{a+b}{2}
+   $$
+3. Si (f(a)) et (f(m)) ont des signes contraires → la racine est dans ([a,m]).
+4. Sinon → la racine est dans ([m,b]).
+5. Répéter jusqu'à obtenir la précision voulue.
+
+L'intervalle se **réduit de moitié** à chaque étape.
+Méthode **lente mais infaillible** si les conditions sont remplies.
+
+---
+
+#  **Exemple Python très simple**
+
+On cherche la solution de :
 
 $$
-f(x)=x e^{-x}
+f(x)=x^2 - 2 = 0
 $$
 
-1. Tracer f.
-2. Calculer f' numériquement.
-3. Repérer la zone où f est le plus sensible (dérivée la plus grande en valeur absolue).
-4. Interpréter.
+La solution exacte est 
+
+$$
+\sqrt{2}
+$$
+
+---
+
+## Exercice 
+
+Trouvez, à l'aide de la méthode par dicothomie, une valeur approchée de :
+
+$$
+\sqrt{2}
+$$
+
+---
+
+# TP Saturation numérique
+
+[Saturation numérique](https://github.com/Antoine07/maths/tree/main/Derivation/TPs/01_saturation_numerique.md)
 
 ---
 
