@@ -18,6 +18,8 @@ Il fournit toutes les notions nécessaires pour analyser correctement une foncti
 
 La limite décrit **le comportement d'une fonction lorsqu'on s'approche d'un point**, ou lorsqu'on part vers l'infini.
 
+---
+
 ## Limites aux bornes infinies
 
 Pour une fonction polynomiale :
@@ -37,6 +39,8 @@ $$
 $$
 g(x)= -5x^4 + x \quad\Rightarrow\quad g(x)\to -\infty\text{ lorsque }x\to+\infty.
 $$
+
+---
 
 ## Limites en un point
 
@@ -156,17 +160,7 @@ Ce type de fonction aide à comprendre :
 
 Pour résoudre (f(x)>0), (f(x)<0), etc.
 
-Exemple :
-
-$$
-f(x)=x(x-3)
-$$
-
-Racines : (0) et (3)
-
-| Intervalle | $$-\infty, 0$$| (0, 3) | $$3, +\infty$$ |
-| ---------- | ------------ | ------ | ------------ |
-| Signe f(x) | –            | +      | +            |
+On en a déjà parlé
 
 ---
 
@@ -200,7 +194,7 @@ Cette formule sera utilisée plus tard pour l'**approximation linéaire**.
 
 ---
 
-# Méthode complète d'étude d'une fonction
+# Méthode complète (cette fois) d'étude d'une fonction 
 
 Pour étudier une fonction (méthode standard) :
 
@@ -289,7 +283,9 @@ c) $$h(x)=\ln(x)$$
 
 Etudiez cette fonction avec ce que nous avons déjà vu ensemble.
 
-$$f(x)=\sqrt{x+4}$$ 
+$$
+f(x)=\sqrt{x+4}
+$$ 
 
 
 ---
