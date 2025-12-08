@@ -245,10 +245,10 @@ $$
 b) 
 
 $$
-g(x)=x + \frac{1}{x}$$ 
+g(x)=x + \frac{1}{x}
 $$
 
-cette fonction n'est pas définie en x = 0
+Cette fonction n'est pas définie en 0.
 
 c) 
 
@@ -300,5 +300,7 @@ T_raw = 10 + 5 * np.sin((2*np.pi/24)*t) + noise
 ## TP optimisation 
 
 [TP Optimisation](https://github.com/Antoine07/maths/blob/main/Derivation/TPs/00_TP_optimisation.md)
+
+---
 
 ## [Retour au plan](https://antoine07.github.io/maths/)

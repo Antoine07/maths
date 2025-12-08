@@ -2,3 +2,5 @@ Corrections/
 .vscode/
 dark.css
 notebooks/
+package*
+node_modules/
