@@ -4,7 +4,8 @@
 
 Dans cet exercice, vous allez :
 
-1. **simuler des données de température** sur 48 heures ;
+1. **simuler des données de température** sur 48 heures, utilisez une sinusoïde chaude en journée et froide la nuit, ajoutez du bruit avec une fonction normale.
+*La loi normale est utilisée parce qu'elle modélise bien les petits écarts fréquents et les grands écarts rares, ce qui correspond au comportement naturel de nombreuses données physiques.*
 2. **nettoyer** ces données ;
 3. **construire une matrice NumPy** représentant les mesures ;
 4. **calculer la dérivée numérique** de la température ;
@@ -67,10 +68,10 @@ Vous devez :
 
 1. Créer un vecteur `t` contenant les heures de 0 à 47.
 
-2. Simuler une température réaliste à l’aide :
+2. Simuler une température réaliste à l'aide :
 
-   * d’une **sinusoïde** (variation jour/nuit),
-   * d’un **bruit aléatoire** (variations naturelles).
+   * d'une **sinusoïde** (variation jour/nuit),
+   * d'un **bruit aléatoire** (variations naturelles).
 
 3. Visualiser les 10 premières valeurs.
 
@@ -82,8 +83,8 @@ Vous devez :
 
 1. Identifier les valeurs aberrantes :
 
-   * température < −5
-   * température > 35
+température < −5
+température > 35
 2. Créer un masque booléen.
 3. Remplacer toute valeur aberrante par la moyenne de ses deux voisins immédiats.
 
@@ -91,7 +92,7 @@ Vous devez :
 
 ---
 
-# 🧭 **Étape 3 — Construction d’une matrice NumPy**
+# 🧭 **Étape 3 — Construction d'une matrice NumPy**
 
 Créer une matrice ( M ) de taille 48 × 2 :
 
@@ -111,8 +112,8 @@ Pour cela, utilisez **uniquement** :
 
 Puis afficher :
 
-* la forme `M.shape`,
-* les 5 premières lignes.
+1. la forme `M.shape`,
+1. les 5 premières lignes.
 
 > *But : représenter proprement les données sous forme tabulaire.*
 
@@ -132,7 +133,7 @@ Vous devez :
 2. Créer un vecteur des heures correspondantes ;
 3. Visualiser les 10 premières valeurs de la dérivée.
 
-> *But : mesurer l’évolution locale de la température.*
+> *But : mesurer l'évolution locale de la température.*
 
 ---
 
@@ -140,9 +141,9 @@ Vous devez :
 
 À partir du vecteur `dT` :
 
-1. Trouvez l’heure où la température monte **le plus vite**.
-2. Trouvez l’heure où elle baisse **le plus vite**.
-3. Déterminez les heures où la température est **quasi stable**, c’est-à-dire :
+1. Trouvez l'heure où la température monte **le plus vite**.
+2. Trouvez l'heure où elle baisse **le plus vite**.
+3. Déterminez les heures où la température est **quasi stable**, c'est-à-dire :
 
 $$
 |T'(t)| < 0.1
@@ -161,10 +162,10 @@ Créer deux graphiques :
 
 Chaque graphique doit contenir :
 
-* un titre,
-* des axes nommés,
-* une grille,
-* une ou deux séries (selon le cas).
+1. un titre,
+1. des axes nommés,
+1. une grille,
+1. une ou deux séries (selon le cas).
 
 🎯 *But : visualiser proprement vos résultats.*
 
@@ -182,9 +183,9 @@ Entrées : `t` (heure)
 
 Retourner en JSON :
 
-* heure demandée,
-* température correspondante,
-* dérivée correspondante (approx).
+1. heure demandée,
+1. température correspondante,
+1. dérivée correspondante (approx).
 
 ---
 
@@ -194,10 +195,10 @@ Entrées : `t1`, `t2`
 
 Retourner :
 
-* liste des températures entre t1 et t2,
-* moyenne,
-* minimum,
-* maximum.
+1. liste des températures entre t1 et t2,
+1. moyenne,
+1. minimum,
+1. maximum.
 
 ---
 
@@ -205,11 +206,11 @@ Retourner :
 
 Retourner un **PNG** généré avec Matplotlib :
 
-* soit la courbe des températures,
-* soit la courbe de dérivée,
-* soit les deux superposées (au choix).
+1. soit la courbe des températures,
+1. soit la courbe de dérivée,
+1. soit les deux superposées (au choix).
 
-> *But : relier l’analyse mathématique à un service REST simple.*
+> *But : relier l'analyse mathématique à un service REST simple.*
 
 ---
 
@@ -220,5 +221,5 @@ Ajouter dans votre rapport :
 1. Pourquoi la dérivée numérique est-elle une **approximation** de la dérivée réelle ?
 2. Pourquoi le bruit rend-il la dérivée plus irrégulière ?
 3. Quelles limites a le nettoyage par moyenne locale ?
-4. Comment améliorer l’analyse (ex : moyenne glissante) ?
+4. Comment améliorer l'analyse (ex : moyenne glissante) ?
 5. Comment généraliser ce TP à des données météo réelles ?

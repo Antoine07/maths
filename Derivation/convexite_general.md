@@ -57,7 +57,7 @@ C'est l'extension naturelle du bol parabolique 2D.
 
 ---
 
-## 🟩 3.1. Calcul du Hessien
+##  3.1. Calcul du Hessien
 
 Les dérivées secondes :
 
@@ -80,7 +80,7 @@ $$
 
 ---
 
-## 🟩 3.2. Test de convexité général
+## 3.2. Test de convexité général
 
 Prenons **un vecteur arbitraire** :
 
