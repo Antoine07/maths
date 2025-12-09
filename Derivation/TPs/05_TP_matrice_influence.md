@@ -18,13 +18,7 @@ A,
 \begin{pmatrix}
 x_n \\
 y_n
-\end{pmatrix},
-\qquad
-A=
-\begin{pmatrix}
-0.9 & 0.4 \\
-0.1 & 0.7
-\end{pmatrix}.
+\end{pmatrix}
 $$
 
 
