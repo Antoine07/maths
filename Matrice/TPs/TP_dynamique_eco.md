@@ -199,7 +199,7 @@ Interprétez les résultats
 $$
 B=
 \begin{pmatrix}
-2 & 0\\
+2 & 0 \\
 0 & 1
 \end{pmatrix}
 $$
