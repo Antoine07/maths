@@ -80,12 +80,7 @@ Interpréter le résultat en mots :
 3. L'économie se stabilise-t-elle ?
 4. À votre avis : si on continue encore 10 ans, que se passe-t-il ?
 
-
-## **Tracer l'évolution de l'industrie et des services**
-
-(au choix : tableau, courbe, etc.)
-
-Interpréter simplement :
+---
 
 * est-ce que les deux secteurs convergent ?
 * deviennent-ils proches ?
@@ -102,7 +97,6 @@ Votre réponse doit être intuitive :
 > peut-elle suffire à prévoir l'évolution à long terme d'une économie simplifiée ?
 
 ---
-
 
 ##  **Valeurs propres et vecteurs propres**
 
@@ -136,10 +130,18 @@ Donc :
 Un vecteur propre est **une direction qui ne change pas**, sauf pour l'étirement.
 
 $$
-B \begin{pmatrix} 1 \\ 0 \end{pmatrix}
+B \begin{pmatrix} 
+1 \\ 
+0 
+\end{pmatrix}
 =
-\begin{pmatrix} 2 \\ 0 \end{pmatrix}
-= 2 \begin{pmatrix} 1\\0 \end{pmatrix}.
+\begin{pmatrix} 
+2 \\ 
+0 
+\end{pmatrix}
+= 2 \begin{pmatrix} 
+1 \\ 
+0 \end{pmatrix}.
 $$
 
 1. même direction, juste étirée.
@@ -153,7 +155,11 @@ $$
 ### Axe vertical `(0,1)`
 
 $$
-B \begin{pmatrix} 0 \\ 1 \end{pmatrix}
+B 
+\begin{pmatrix} 
+0 \\ 
+1 
+\end{pmatrix}
 =
 \begin{pmatrix} 0 \\ 1 \end{pmatrix}
 = 1 \begin{pmatrix} 0\\1 \end{pmatrix}.
