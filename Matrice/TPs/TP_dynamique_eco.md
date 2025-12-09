@@ -130,7 +130,8 @@ Donc :
 Un vecteur propre est **une direction qui ne change pas**, sauf pour l'étirement.
 
 $$
-B \begin{pmatrix} 
+B 
+\begin{pmatrix} 
 1 \\ 
 0 
 \end{pmatrix}
@@ -139,7 +140,8 @@ B \begin{pmatrix}
 2 \\ 
 0 
 \end{pmatrix}
-= 2 \begin{pmatrix} 
+= 2 
+\begin{pmatrix} 
 1 \\ 
 0 \end{pmatrix}.
 $$
@@ -161,8 +163,14 @@ B
 1 
 \end{pmatrix}
 =
-\begin{pmatrix} 0 \\ 1 \end{pmatrix}
-= 1 \begin{pmatrix} 0\\1 \end{pmatrix}.
+\begin{pmatrix} 
+0 \\ 
+1 
+\end{pmatrix}
+= 1 
+\begin{pmatrix} 
+0 \\ 1 
+\end{pmatrix}.
 $$
 
 1. direction intacte.
