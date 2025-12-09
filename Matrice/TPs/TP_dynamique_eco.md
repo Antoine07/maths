@@ -212,7 +212,11 @@ $$
 ### **Pour la matrice économique**
 
 $$
-A=\begin{pmatrix}0.8&0.1\\0.2&0.9\end{pmatrix}
+A=
+\begin{pmatrix}
+0.8&0.1\\
+0.2&0.9
+\end{pmatrix}
 $$
 
 1. Vérifier que `(1,-1)` est un vecteur propre.
