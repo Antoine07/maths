@@ -197,7 +197,11 @@ Interprétez les résultats
 ### **Pour la matrice suivante**
 
 $$
-B=\begin{pmatrix}2&0\\0&1\end{pmatrix}
+B=
+\begin{pmatrix}
+2 & 0\\
+0 & 1
+\end{pmatrix}
 $$
 
 1. Vérifier que `(1,0)` est un vecteur propre.
