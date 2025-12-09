@@ -1,4 +1,3 @@
-
 #  **Exercice — Analyse de données : recommandations et matrice d'influence**
 
 Une plateforme de streaming analyse le comportement de ses utilisateurs pour améliorer ses recommandations.
@@ -11,22 +10,28 @@ La plateforme observe que d'une semaine à l'autre, les préférences évoluent 
 
 $$
 \begin{pmatrix}
-x_{n+1} \\
+x_{n+1} \
 y_{n+1}
 \end{pmatrix}
 =
-A
+A,
 \begin{pmatrix}
-x_n  \\
+x_n \
 y_n
 \end{pmatrix},
 \qquad
 A=
 \begin{pmatrix}
-0.9 & 0.4  \\
+0.9 & 0.4 \
 0.1 & 0.7
 \end{pmatrix}.
 $$
+
+---
+
+Si vous souhaitez l’intégrer dans Marp, je peux aussi préparer une version compatible pour éviter tout problème d'affichage dans vos slides.
+
+
 
 La matrice (A) encode les influences :
 
