@@ -55,7 +55,7 @@ $$
 
 ---
 
-# ✦ **Dérivée seconde et dynamique**
+#  **Dérivée seconde et dynamique**
 
 Expliquer, dans le contexte d'un marché :
 
