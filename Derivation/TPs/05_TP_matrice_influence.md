@@ -4,8 +4,8 @@
 Une plateforme de streaming analyse le comportement de ses utilisateurs pour améliorer ses recommandations.
 Chaque utilisateur est représenté par deux caractéristiques :
 
-* (x) : intérêt pour les **films d'action**,
-* (y) : intérêt pour les **films dramatiques**.
+(x) : intérêt pour les **films d'action**,
+(y) : intérêt pour les **films dramatiques**.
 
 La plateforme observe que d'une semaine à l'autre, les préférences évoluent selon le modèle linéaire suivant :
 
@@ -15,7 +15,6 @@ x_{n+1} \\
 y_{n+1}
 \end{pmatrix}
 =
-
 A
 \begin{pmatrix}
 x_n  \\
