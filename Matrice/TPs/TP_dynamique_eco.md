@@ -100,7 +100,6 @@ Votre réponse doit être intuitive :
 
 ##  **Valeurs propres et vecteurs propres**
 
-
 ###  Une matrice qui étire l'espace différemment selon les directions
 
 On considère maintenant une matrice  :
@@ -129,23 +128,6 @@ Donc :
 
 Un vecteur propre est **une direction qui ne change pas**, sauf pour l'étirement.
 
-$$
-B 
-\begin{pmatrix} 
-1 \\ 
-0 
-\end{pmatrix}
-=
-\begin{pmatrix} 
-2 \\ 
-0 
-\end{pmatrix}
-= 2 
-\begin{pmatrix} 
-1 \\ 
-0 \end{pmatrix}.
-$$
-
 1. même direction, juste étirée.
 1. C'est un **vecteur propre**.
 1. La **valeur propre** associée est :
@@ -155,23 +137,6 @@ $$
 $$
 
 ### Axe vertical `(0,1)`
-
-$$
-B 
-\begin{pmatrix} 
-0 \\ 
-1 
-\end{pmatrix}
-=
-\begin{pmatrix} 
-0 \\ 
-1 
-\end{pmatrix}
-= 1 
-\begin{pmatrix} 
-0 \\ 1 
-\end{pmatrix}.
-$$
 
 1. direction intacte.
 1. C'est un vecteur propre.
