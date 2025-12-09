@@ -27,11 +27,8 @@ A=
 \end{pmatrix}.
 $$
 
----
 
 Si vous souhaitez l’intégrer dans Marp, je peux aussi préparer une version compatible pour éviter tout problème d'affichage dans vos slides.
-
-
 
 La matrice (A) encode les influences :
 
