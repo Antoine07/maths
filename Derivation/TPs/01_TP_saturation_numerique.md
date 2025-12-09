@@ -36,6 +36,7 @@ En déduire une expression simple de `U'(t)`.
 ## **Étudier rigoureusement le signe de `U'(t)`**
 
 On pose :
+
 $$
 f(t)=U'(t)
 $$
@@ -73,6 +74,7 @@ Calculez la limite en + l'infini de la fonction `U`.
 ## **Y-a-t-il des asymptotes**
 
 Étudier :
+
 $$
 \frac{U(t)}{t} = \ln(t+2)-2 + \frac{5}{t}
 $$
@@ -88,14 +90,14 @@ $$
 
 ---
 
-## **Croissance "faiblement exploitable"**
+## **Analyse de la faiblesse de la croissance**
 
-On dit que la croissance devient "faible" si :
+On fixe un seuil minimal de croissance égal à :
 
 $$
-U'(t) < 0.2
+U'(t) = 0.2.
 $$
 
-(en milliers d'utilisateurs par mois, soit moins de 200 personnes).
+On dit que la croissance est trop faible lorsque la dérivée (U'(t)) est strictement inférieure à ce seuil.
+Déterminer, à l’aide d’un raisonnement analytique ou d’un calcul numérique, l’instant à partir duquel cette situation cesse d’être vérifiée.
 
-Déterminer approximativement à partir de quel mois la croissance devient trop faible.
