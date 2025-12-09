@@ -128,9 +128,9 @@ Donc :
 
 1. même direction, juste étirée.
 1. C'est un **vecteur propre**.
-1. La **valeur propre** associée est :
+1. La **valeur propre** associée est ?
 
-## Application économique intuitive
+---
 
 Revenons à la matrice économique `A` 
 
