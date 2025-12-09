@@ -14,7 +14,7 @@ x_{n+1} \\
 y_{n+1}
 \end{pmatrix}
 =
-A,
+A
 \begin{pmatrix}
 x_n \\
 y_n
