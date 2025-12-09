@@ -104,10 +104,10 @@ Votre réponse doit être intuitive :
 ---
 
 
-#  **Partie 2 — Valeurs propres et vecteurs propres**
+##  **Valeurs propres et vecteurs propres**
 
 
-#  Une matrice qui étire l'espace différemment selon les directions
+###  Une matrice qui étire l'espace différemment selon les directions
 
 On considère maintenant une matrice  :
 
@@ -122,7 +122,7 @@ $$
 Elle transforme un vecteur `(x,y)` en :
 
 $$
-(x,y) ;\longrightarrow; (2x,, y)
+(x,y) \longrightarrow(2x,, y)
 $$
 
 Donc :
@@ -174,7 +174,7 @@ $$
 
 Ce sont les **deux directions spéciales** de la matrice.
 
-# Application économique intuitive
+## Application économique intuitive
 
 Revenons à la matrice économique `A` 
 
@@ -186,81 +186,13 @@ A=
 \end{pmatrix}.
 $$
 
-###  Trouver un vecteur `v = (x,y)` tel que `A v` soit **proportionnel** à `v`.
-
-On peut tester des vecteurs simples :
-
-`v = (1,1)`
-
-$$
-A \begin{pmatrix} 1 \\ 1 \end{pmatrix}
-=
-\begin{pmatrix} 0.8 + 0.1 \\ 0.2 + 0.9 \end{pmatrix}
-=
-\begin{pmatrix} 0.9 \\ 1.1 \end{pmatrix}
-$$
-
-Ce vecteur n'est **pas** proportionnel à `(1,1)`, ce n'est **pas un vecteur propre**.
-
-`v = (1,0)`
-
-$$
-A \begin{pmatrix} 1 \\ 0 \end{pmatrix}
-=
-\begin{pmatrix} 0.8 \ 0.2 \end{pmatrix}.
-$$
-
-Le résultat n'est pas un multiple de ((1,0)) → **pas bon**.
-
-### • Essai 3 : (v = (1,-1))
-
-$$
-A \begin{pmatrix} 1 \\ -1 \end{pmatrix}
-=
-\begin{pmatrix} 0.8 - 0.1 \\ 0.2 - 0.9 \end{pmatrix}
-\begin{pmatrix} 0.7 \\ -0.7 \end{pmatrix}
-=
-0.7 \begin{pmatrix} 1 \\ -1 \end{pmatrix}.
-$$
-
-🎉 **C'est proportionnel !**
-
-Donc `(1,-1)` est un **vecteur propre**.
-La valeur propre est : `lambda = 0.7`
+###  Trouver un vecteur `v = (x,y)` tel que `A.v` soit **proportionnel** à `v`.
 
 ---
 
 # Interprétation 
 
-Le vecteur propre `(1,-1)` signifie :
-
-> "Si l'industrie augmente d'une unité et les services diminuent d'une unité,
-> l'année suivante ils changent dans la **même direction**, juste réduits par 0.7”.
-
-C'est une combinaison **stable** dans le temps.
-
-### En clair :
-
-* l'opposition “industrie – services” évolue toujours de la même façon.
-* c'est une **tendance fondamentale** du modèle.
-
----
-
-# Résumé
-
-* Une matrice peut **tourner, étirer, comprimer** des vecteurs.
-* Certaines directions **ne tournent jamais** → ce sont les vecteurs propres.
-* Sur ces directions, la matrice se contente de **multiplier** :
-
-  * multiplier par 2 → croissance
-  * multiplier par 0.7 → décroissance
-  * multiplier par 1 → stabilité totale
-
-Les valeurs propres disent :
-
-> "De combien cette direction spéciale est-elle amplifiée ou réduite ?"
-
----
+Interprétez les résultats
 
 ### **Pour la matrice suivante**
 
@@ -273,7 +205,7 @@ $$
 3. Quelle est la valeur propre associée à chaque direction ?
 4. Pourquoi dit-on que ce sont des "directions privilégiées" ?
 
-### **Pour la matrice économique du TP 1**
+### **Pour la matrice économique**
 
 $$
 A=\begin{pmatrix}0.8&0.1\\0.2&0.9\end{pmatrix}
@@ -289,13 +221,7 @@ $$
 ### **Simulation Python**
 
 ```python
-import numpy as np
-
-A = np.array([[0.8, 0.1],
-              [0.2, 0.9]])
-
-v = np.array([1., -1.])
-print(A @ v)
+# TODO
 ```
 
 Comparer le résultat avec `lambda v`
