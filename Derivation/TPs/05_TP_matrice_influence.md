@@ -14,51 +14,19 @@ x_{n+1} \\
 y_{n+1}
 \end{pmatrix}
 =
-A
-$$
-
-
-Voici la version corrigée : le problème venait de l’emplacement des espaces et des retours à la ligne dans l’environnement LaTeX.
-
----
-
-# ✔️ Version propre, sans bug
-
-[
-\begin{pmatrix}
-x_{n+1} \
-y_{n+1}
-\end{pmatrix}
-=============
-
 A,
 \begin{pmatrix}
-x_n \
+x_n \\
 y_n
 \end{pmatrix},
 \qquad
 A=
 \begin{pmatrix}
-0.9 & 0.4 \
+0.9 & 0.4 \\
 0.1 & 0.7
 \end{pmatrix}.
-]
+$$
 
----
-
-Si vous souhaitez l’intégrer dans Marp, je peux aussi préparer une version compatible pour éviter tout problème d'affichage dans vos slides.
-
-
-
-Si vous souhaitez l’intégrer dans Marp, je peux aussi préparer une version compatible pour éviter tout problème d'affichage dans vos slides.
-
-La matrice (A) encode les influences :
-
-* regarder des films d'action augmente légèrement l'intérêt pour les films dramatiques,
-* regarder des drames augmente modérément l'intérêt pour l'action,
-* chaque intérêt décroît naturellement avec le temps.
-
----
 
 
 ### **Calculez les valeurs propres de (A).**
