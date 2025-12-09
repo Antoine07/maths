@@ -98,40 +98,6 @@ Votre réponse doit être intuitive :
 
 ---
 
-##  **Valeurs propres et vecteurs propres**
-
-###  Une matrice qui étire l'espace différemment selon les directions
-
-On considère maintenant une matrice  :
-
-$$
-B=
-\begin{pmatrix}
-2 & 0 \\
-0 & 1
-\end{pmatrix}.
-$$
-
-Elle transforme un vecteur `(x,y)` en :
-
-$$
-(x,y) \longrightarrow(2x,, y)
-$$
-
-Donc :
-
-* elle **double** la composante `x`,
-* elle laisse **inchangée** la composante `y`.
-
-
-### Quelles directions ne tournent pas ?
-
-1. même direction, juste étirée.
-1. C'est un **vecteur propre**.
-1. La **valeur propre** associée est ?
-
----
-
 Revenons à la matrice économique `A` 
 
 $$
