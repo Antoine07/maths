@@ -126,32 +126,9 @@ Donc :
 
 ### Quelles directions ne tournent pas ?
 
-Un vecteur propre est **une direction qui ne change pas**, sauf pour l'étirement.
-
 1. même direction, juste étirée.
 1. C'est un **vecteur propre**.
 1. La **valeur propre** associée est :
-
-$$
-\lambda = 2.
-$$
-
-### Axe vertical `(0,1)`
-
-1. direction intacte.
-1. C'est un vecteur propre.
-1. Valeur propre associée :
-
-$$
-\lambda = 1.
-$$
-
-**Conclusion simple :**
-
-* L'axe horizontal est **doublé**.
-* L'axe vertical est **conservé**.
-
-Ce sont les **deux directions spéciales** de la matrice.
 
 ## Application économique intuitive
 
