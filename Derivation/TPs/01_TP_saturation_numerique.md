@@ -95,7 +95,7 @@ $$
 On fixe un seuil minimal de croissance égal à :
 
 $$
-U'(t) = 0.2.
+U'(t) < 0.2.
 $$
 
 On dit que la croissance est trop faible lorsque la dérivée (U'(t)) est strictement inférieure à ce seuil.
