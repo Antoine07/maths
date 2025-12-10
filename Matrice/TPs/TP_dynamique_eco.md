@@ -154,4 +154,4 @@ $$
 # TODO
 ```
 
-Comparer le résultat avec `lambda v`
+Comparer le résultat.
