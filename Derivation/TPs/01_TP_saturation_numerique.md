@@ -82,7 +82,7 @@ $$
 1. Calculer sa limite.
 2. Conclure s'il existe une asymptote horizontale ou oblique.
 
-À partir du signe de (U'(t)), expliquer :
+À partir du signe de U'(t), expliquer :
 
 1. quand l'application perd des utilisateurs,
 1. quand elle en regagne,
