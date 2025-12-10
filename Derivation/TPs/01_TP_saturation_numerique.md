@@ -98,6 +98,6 @@ $$
 U'(t) < 0.2.
 $$
 
-On dit que la croissance est trop faible lorsque la dérivée (U'(t)) est strictement inférieure à ce seuil.
+On dit que la croissance est trop faible lorsque la dérivée U'(t) est strictement inférieure à ce seuil.
 Déterminer, à l’aide d’un raisonnement analytique ou d’un calcul numérique, l’instant à partir duquel cette situation cesse d’être vérifiée.
 
