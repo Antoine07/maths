@@ -89,7 +89,9 @@ $$
 
 $$
 \boxed{
-X_2 = \begin{pmatrix} 94.8 \ 55.6 \end{pmatrix}
+X_2 = \begin{pmatrix} 
+94.8 \\ 
+55.6 \end{pmatrix}
 }
 $$
 
