@@ -53,7 +53,9 @@ $$
 
 $$
 \boxed{
-X_1 = \begin{pmatrix} 96 \\ 68 \end{pmatrix}
+X_1 = \begin{pmatrix} 
+96 \\ 
+68 \end{pmatrix}
 }
 $$
 
