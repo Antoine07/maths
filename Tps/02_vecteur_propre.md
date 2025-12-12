@@ -80,7 +80,6 @@ $$
 $$
 Y_n
 = \alpha, \left(\lambda_1 - \tfrac12\right)\frac{\lambda_1^n}{n} v_1
-
 + \beta, \left(\lambda_2 - \tfrac12\right)\frac{\lambda_2^n}{n} v_2.
 $$
 
