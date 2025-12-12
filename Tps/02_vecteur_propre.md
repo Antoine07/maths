@@ -67,7 +67,7 @@ lorsque `n tend vers l'infini`.
 
 Rédigez une analyse de vos résultats.
 
-## Questions facultatives
+## Partie facultative
 
 On s'intéresse maintenant à la suite transformée suivante :
 

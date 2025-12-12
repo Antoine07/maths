@@ -79,10 +79,10 @@ Répondez aux questions suivantes :
 1. Les médianes sont-elles proches dans les différentes normalisations ?
    Cela signifie-t-il que les séries ont des niveaux comparables une fois standardisées ?
 
+## Partie facultative
+
 2. Quelle série est la plus dispersée ?
    Observer la longueur des moustaches dans les boxplots min–max.
-
-## Questions facultatives
 
 3. Observe-t-on des valeurs atypiques (outliers) dans l'une ou l'autre normalisation ?
 
