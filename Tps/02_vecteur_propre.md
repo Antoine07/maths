@@ -20,8 +20,8 @@ X_{n+1} = M X_n,
 \qquad
 M=
 \begin{pmatrix}
-1.15 & -0.4 \\
-0.3 & 0.85
+1.20 & -0.2 \\
+0.3 & 0.70
 \end{pmatrix},
 \qquad
 X_0=
