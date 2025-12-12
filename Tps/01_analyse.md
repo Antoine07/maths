@@ -13,7 +13,7 @@ $$
 1. Interpréter physiquement ces résultats.
 
 1. Dérivée `T(t)`
-1. Résoudre l'équation `T(t)=0`.
+1. Résoudre l'équation `T'(t)=0`.
 1. Déterminer les variations de (T).
 1. En déduire à quel instant la température atteint un **maximum**.
 

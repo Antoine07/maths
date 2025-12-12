@@ -6,7 +6,7 @@ class: lead
 ---
 
 
-# **Cours de maths CODA**
+# **Cours de maths CODA** 1/2
 
 ### [**Révisions**](https://antoine07.github.io/maths/revision.html) - .5 jour
 
@@ -14,13 +14,17 @@ class: lead
 
 ### [**Dérivation 02**](https://antoine07.github.io/maths/02_derivation.html) .5 jour
 
+### [**Modélisation**](https://antoine07.github.io/maths/01_modelisation.html)
+
+### [**Matrice**](https://antoine07.github.io/maths/matrice.html) .75 jour
+
+---
+
+# **Cours de maths CODA** 2/2
+
+### [**ACP**](https://antoine07.github.io/maths/statistiques.html) .75 jour
+
 ### [**Gradient**](https://antoine07.github.io/maths/gradient.html) .5 jour
-
-### [**Valeurs propres**](https://antoine07.github.io/maths/matrice.html) .75 jour
-
-### **Statistiques introduction** .25 jour
-
-### **ACP** .25 jour
 
 ### **TP final**  1 jour
 
@@ -36,3 +40,8 @@ Applications avec NumPy, tracés, API FastAPI.
 1. [TP final] ?
 
 ## [Retour au plan](https://antoine07.github.io/maths/)
+
+
+----
+
+# Fin du cours

@@ -80,7 +80,7 @@ Un vecteur est un ensemble ordonné de nombres.
 $$
 x =
 \begin{pmatrix}
-2\\
+2 \\
 -1
 \end{pmatrix}
 $$
@@ -96,7 +96,7 @@ Une matrice est un tableau de nombres.
 $$
 A=
 \begin{pmatrix}
-1 & 3\\
+1 & 3 \\
 2 & -1
 \end{pmatrix}
 $$
@@ -105,7 +105,7 @@ Elle représente une transformation linéaire : elle prend un vecteur en entrée
 
 ---
 
-## II. Multiplication matrice–vecteur
+## II.1 Multiplication matrice–vecteur
 
 Pour une matrice (A) et un vecteur (x), le produit (Ax) est défini par :
 
@@ -122,7 +122,7 @@ Exemple :
 $$
 A=
 \begin{pmatrix}
-1 & 2\\
+1 & 2 \\
 3 & 1
 \end{pmatrix},
 \quad
@@ -152,6 +152,79 @@ Interprétation : la matrice transforme le vecteur en l'étirant, le tournant ou
 
 ---
 
+## II.2 Multiplication matrice–martice
+
+Voici la **règle** pour multiplier deux matrices **2×2** :
+
+$$
+\begin{pmatrix}
+a & b \\
+c&d
+\end{pmatrix}
+
+\begin{pmatrix}
+e & f\\
+g & h
+\end{pmatrix}
+=
+
+\begin{pmatrix}
+ae + bg & af + bh \\
+ce + dg & cf + dh
+\end{pmatrix}.
+$$
+
+👉 **Ligne × Colonne** pour chaque élément.
+
+---
+Voici la **règle très** pour multiplier deux matrices **3×3** :
+
+$$
+C = A \times B,\quad C_{ij} = \text{somme des produits }(\text{ligne } i \text{ de } A)\times(\text{colonne } j \text{ de } B).
+$$
+
+Autrement dit :
+
+> **Chaque élément = ligne de A × colonne de B.**
+
+
+---
+
+Pour multiplier :
+
+$$
+A_{n \times p} \quad \text{et} \quad B_{p \times m},
+$$
+
+il faut :
+
+$$
+\boxed{\text{colonnes de A} = \text{lignes de B}}.
+$$
+
+Donc **p = p**
+
+
+---
+
+**Magie de Numpy**
+
+Pour multiplier deux matrices il suffit d'utiliser l'opérateur `@` comme suit dans Numpy
+
+`C = A @ B`
+
+A et B sont deux matrices Numpy `np.array`, l'opérateur ne marche que sur les array `numpy`
+
+---
+
+**Qu'est ce que ces dimensions peuvent représenter ?**
+
+n = le nombre d'individus / situations / observations
+
+p = le nombre de variables / paramètres / données par individu
+
+---
+
 ## III. Transformations linéaires
 
 Une matrice carrée représente une transformation linéaire de l'espace vers lui-même.
@@ -163,7 +236,7 @@ Voici les transformations fondamentales.
 $$
 A=
 \begin{pmatrix}
-3 & 0\\
+3 & 0 \\
 0 & 1
 \end{pmatrix}
 $$
@@ -200,21 +273,7 @@ Symétrie par rapport à l'axe (x).
 
 ---
 
-### 4. Cisaillement (shear)
-
-$$
-A=
-\begin{pmatrix}
-1 & 1\\
-0 & 1
-\end{pmatrix}
-$$
-
-Incline les vecteurs vers la droite.
-
----
-
-### 5. Rotation
+### 4. Rotation
 
 $$
 A=
@@ -258,7 +317,7 @@ Les matrices symétriques possèdent des propriétés géométriques fortes, not
 
 ### 1. Définition
 
-Pour une matrice carrée (A), un vecteur non nul (v) est un vecteur propre s'il existe un réel $$\lambda$$ tel que :
+Pour une matrice carrée (A), un vecteur non nul (v) est un vecteur propre s'il existe un réel `lambda` tel que :
 
 $$
 A v = \lambda v
@@ -266,7 +325,6 @@ $$
 
 1. (v) est une direction préservée,
 
-1. 
 
 $$
 \lambda
@@ -276,7 +334,7 @@ est le facteur d'étirement dans cette direction.
 
 ---
 
-### 2. Exemple simple
+### 2. Exemple
 
 $$
 A=
@@ -306,7 +364,7 @@ A
 \end{pmatrix}
 $$
 
-Donc $$(1,0)^T$$ est un vecteur propre, valeur propre $$\lambda = 3$$.
+Donc `(1,0)^T` est un vecteur propre, valeur propre `lambda = 3`. 
 
 De même :
 
@@ -376,7 +434,7 @@ sont les **valeurs propres**.
 
 # 2. Trouver les vecteurs propres
 
-Pour chaque valeur propre $$(\lambda)$$, on résout :
+Pour chaque valeur propre  `lambda`, on résout :
 
 $$
 (A - \lambda I)v = 0.
@@ -520,13 +578,13 @@ La matrice de covariance est diagonalisée :
 
 # Inverse d'une matrice : méthode de la matrice augmentée
 
-Une matrice (A) est inversible s'il existe $$(A^{-1})$$ tel que :
+Une matrice (A) est inversible s'il existe `InvA` tel que :
 
 $$
 A A^{-1} = I.
 $$
 
-Pour trouver (A^{-1}), on utilise **la matrice augmentée** :
+Pour trouver `InvA`, on utilise **la matrice augmentée** :
 
 $$
 (A \mid I),
@@ -653,109 +711,206 @@ $$
 
 L'inverse est correctement trouvé.
 
+---
+
+# Résolution d'un système linéaire `2x2`
+
+Un système de deux équations à deux inconnues s'écrit :
+
+$$
+\begin{cases}
+a_{11} x + a_{12} y = b_1 \\
+a_{21} x + a_{22} y = b_2
+\end{cases}
+$$
 
 ---
 
-# Exercices
-
-## Exercice 1 — Produit matrice–vecteur
-
-Calculer (Ax) :
+# Forme matricielle
 
 $$
-A=
+A x = b,
+\quad
+A =
 \begin{pmatrix}
-2 & -1\\
-4 & 3
+a_{11} & a_{12}\\
+a_{21} & a_{22}
 \end{pmatrix},
 \quad
-x=
+x =
 \begin{pmatrix}
-1\\
-2
-\end{pmatrix}
-$$
-
----
-
-## Exercice 2 — Symétrie
-
-Dire si les matrices suivantes sont symétriques :
-
-1.
-
-$$
-\begin{pmatrix}
-5 & 2\\
-2 & 1
-\end{pmatrix}
-$$
-
-2.
-
-$$
-\begin{pmatrix}
-0 & 3\\
--3 & 0
-\end{pmatrix}
-$$
-
----
-
-## Exercice 3 — Vecteur propre simple
-
-Pour
-
-$$
-A=
-\begin{pmatrix}
-4 & 0\\
-0 & 1
+x \\ y
 \end{pmatrix},
+\quad
+b =
+\begin{pmatrix}
+b_1 \\ b_2
+\end{pmatrix}.
 $$
 
-1. Montrer que 
-
-$$
-v = (1,0)^T
-$$
-
-est un vecteur propre.
-2. Trouver 
-
-$$
-\lambda
-$$
-
-3. Trouver un autre vecteur propre évident.
+Le but est de trouver le vecteur `x`
 
 ---
 
-## Exercice 4 — Transformation linéaire
+# Condition d'existence d'une solution unique
 
-Décrire géométriquement la transformation réalisée par :
+Une unique solution existe **si et seulement si** :
 
 $$
-A=
-\begin{pmatrix}
-2 & 0\\
-0 & -1
-\end{pmatrix}.
+\det(A) \neq 0.
+$$
+
+Pour une matrice 2×2 :
+
+$$
+\det(A) = a_{11} a_{22} - a_{12} a_{21}.
 $$
 
 ---
 
-## Exercice 4 — Inverse par matrice augmentée
 
-Utiliser exclusivement la méthode de Gauss-Jordan pour trouver l'inverse.
+## Exercice 1
+
+Résoudre à l'aide de la matrice augmentée, puis vérifiez à l'aide `np.linalg.inv(A)` avec Numpy que vous avez bien la matrice inversée.
 
 $$
-A=
-\begin{pmatrix}
-1 & 2\\
-3 & 4
-\end{pmatrix}.
+\begin{cases}
+3x + 2y = 7 \\
+x - y = 1
+\end{cases}
 $$
+
+---
+
+## Exercice 2
+Résoudre par la matrice augmentée :
+
+$$
+\begin{cases}
+4x - y = 10 \\
+2x + y = 8
+\end{cases}
+$$
+
+---
+
+## Exercice 3
+Déterminer si le système possède une solution unique :
+
+$$
+\begin{cases}
+2x + 4y = 8 \\
+x + 2y = 4
+\end{cases}
+$$
+
+---
+
+# Résolution d'un système linéaire `3x3` avec NumPy
+
+Un système linéaire s'écrit sous forme matricielle :
+
+$$
+A x = b
+$$
+
+où `A` est une matrice 3x3, `x` le vecteur des inconnues, et `b` le vecteur des résultats.
+
+NumPy permet de résoudre directement ce type de système.
+
+---
+
+## Méthode
+
+Pour une unique solution, il faut que :
+
+$$
+\det(A) \neq 0.
+$$
+
+NumPy vérifie cette condition automatiquement.
+
+La résolution se fait avec :
+
+```python
+x = np.linalg.solve(A, b)
+```
+
+---
+
+## Exemple
+
+Résoudre :
+
+$$
+\begin{cases}
+x + y + z = 6\\
+2x - y + 3z = 14\\
+-x + 4y + z = 2
+\end{cases}
+$$
+
+---
+
+```python
+import numpy as np
+
+A = np.array([
+    [1, 1, 1],
+    [2, -1, 3],
+    [-1, 4, 1]
+])
+
+b = np.array([6, 14, 2])
+
+x = np.linalg.solve(A, b)
+print(x)
+```
+
+Résultat :
+
+$$
+x=3,\quad y=1,\quad z=2.
+$$
+
+---
+
+## Vérification
+
+```python
+A @ x    # doit être égal à b
+```
+
+---
+
+## Remarque
+
+> Audelas de la dimension 3x3 on utilise d'autres méthodes.
+> Pour des systèmes de taille supérieure à `3x3` on utilise des méthodes numériques robustes comme la décomposition LU ou QR. 
+> NumPy applique automatiquement ces méthodes via `np.linalg.solve`
+
+---
+
+# Méthode stable
+
+```python
+import numpy as np
+
+A = np.array([
+    [2, 1, 0, 3],
+    [1, 4, 2, 1],
+    [0, 2, 5, 2],
+    [3, 1, 2, 6]
+], dtype=float)
+
+b = np.array([7, 12, 15, 20], dtype=float)
+
+x = np.linalg.solve(A, b)
+print("Solution :", x)
+
+```
+
+Si ça échoue : `LinAlgError: Singular matrix`
 
 ---
 
@@ -787,15 +942,9 @@ A = np.array([
 
 # Calcul des valeurs propres et vecteurs propres
 valeurs_propres, vecteurs_propres = np.linalg.eig(A)
-
-print("Valeurs propres :")
 print(valeurs_propres)
-
-print("\nVecteurs propres :")
 print(vecteurs_propres)
 ```
-
-Vérifiez pour une matrice `2x2` que vous obtentez par le calcul et à l'aide de Python les vecteurs propres.
 
 ---
 
@@ -864,7 +1013,7 @@ Cela décrit une **relation opposée** :
 
 # TP dynamique économique
 
-[Dynamique économique](https://github.com/Antoine07/maths/tree/main/Derivation/TPs/TP_dynamique_eco.md)
+[Dynamique des espèces](https://github.com/Antoine07/maths/blob/main/Matrice/TPs/TP_dynamique_especes.md)
 
 ---
 

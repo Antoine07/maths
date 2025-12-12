@@ -12,7 +12,8 @@ X_{n+1} = M X_n,
 \qquad
 X_n =
 \begin{pmatrix}
-x_n \\ y_n
+x_n \\ 
+y_n
 \end{pmatrix},
 \quad
 M=

@@ -39,12 +39,19 @@ $$
 
 ## a) Surface 3D
 
-On visualise (z=f(x,y)) dans l'espace.
+On visualise `z=f(x,y)` dans l'espace.
 
 ## b) Courbes de niveau
 
-Courbes (f(x,y)=c).
-Exemple : pour (f(x,y)=x^2+y^2), ce sont des cercles.
+Courbes `f(x,y)=c`
+
+Exemple : pour 
+
+$$
+f(x,y)=x^2+y^2
+$$
+
+ce sont des cercles.
 
 ---
 
@@ -79,7 +86,11 @@ $$
 
 #  Dérivée directionnelle
 
-La fonction peut varier selon **n'importe quelle direction** (u=(u_1,u_2)) (normalisée).
+La fonction peut varier selon **n'importe quelle direction** 
+
+$$
+u=(u_1,u_2)
+$$
 
 Définition :
 
@@ -159,46 +170,100 @@ Il sert à analyser :
 1. **nature des points critiques.**
 
 ---
+## Hessienne
 
-# Convexité et Hessien (dimension 2)
+La Hessienne est symétrique si les dérivées secondes sont continues...
 
-Le test utilise :
-
-$$
-\det(H)=f_{xx}f_{yy} - ( f_{xy} f_{yx} )
-$$
+Toute matrice symétrique a :
+1. des valeurs propres réelles,
+1. une base de vecteurs propres,
+1. une diagonalisation orthogonale.
 
 ---
 
-##  Fonction strictement convexe
+# Convexité et Hessien 
 
-$$
-f_{xx}>0,\quad \det(H)>0.
-$$
+Test avec Numpy
+
+```python
+eigvals = np.linalg.eigvals(H)
+is_strictly_convex = np.all(eigvals > 0)
+```
+
+> `is_strictly_convex` minimum local unique
+
+---
+
+## Minimum local 
+
+<img src="./images/min_local_strict.png" width="600" />
 
 ---
 
 ## Fonction strictement concave
 
-$$
-f_{xx}<0,\quad \det(H)>0.
-$$
+
+```python
+eigvals = np.linalg.eigvals(H)
+is_strictly_concave = np.all(eigvals < 0)
+```
+
+> `is_strictly_convex` maximum local unique.
 
 ---
 
-##  Point-selle (indéfini)
+<img src="./images/maximun_local.png" width="700" />
 
-$$
-\det(H)<0.
-$$
+
+---
+
+##  Point-selle 
+
+```python
+eigvals = np.linalg.eigvals(H)
+is_saddle_point = np.any(eigvals < 0) and np.any(eigvals > 0)
+```
+> `is_saddle_point` présence d'au moins une valeur propre positive et d'au moins une négative.
+> Le point critique n'est ni un minimum ni un maximum, c'est un point selle.
+
+---
+
+Exemple code Python
+
+```python
+import numpy as np
+
+# Hessien de f(x, y) = x^2-y^2
+H = np.array([
+    [2, 0],
+    [0, -2]
+], dtype=float)
+
+eigvals = np.linalg.eigvals(H)
+
+print("Valeurs propres :", eigvals)
+
+is_saddle = np.any(eigvals > 0) and np.any(eigvals < 0)
+print("Point selle :", is_saddle)
+```
+
+---
+
+<img src="./images/selle.png" width="700" />
 
 ---
 
 ##  Cas indécidable
 
-$$
-\det(H)=0.
-$$
+```python
+# Cas indécidable : une ou plusieurs valeurs propres = 0 
+is_indecidable = np.any(np.isclose(eigvals, 0))
+print("Cas indécidable :", is_indecidable)
+```
+
+> la méthode du Hessien ne permet pas de conclure.
+> Le point critique peut être : un minimum non strict, un maximum non strict, ou un point selle.
+Il faut utiliser d'autres méthodes (développement plus poussé, étude de la fonction directement, etc.).
 
 ---
 
@@ -243,7 +308,7 @@ H=\begin{pmatrix}
 \end{pmatrix}
 $$
 
-dét < 0 → **point-selle**.
+
 
 ---
 
@@ -374,6 +439,8 @@ $$
 (\Delta x,\Delta y)=(0.1,-0.2).
 $$
 
+>**Près d'un point, une fonction est presque linéaire.**
+
 ---
 
 ## Exercice  — Lien optimisation / Machine Learning
@@ -398,7 +465,7 @@ $$
 $$
 
 $$
-g(x,y)= xy - \ln(3x^2 + y^2).
+g(x,y)= xy - \ln(3x^2 + y^2)
 $$
 
 1. **Calculer les dérivées partielles premières** de (g).
@@ -408,5 +475,127 @@ $$
 5. **Utiliser le déterminant du Hessien** pour classifier la nature du point critique
    (minimum local, maximum local, ou point-selle).
 
+---
+
+# Dimension supérieur à 2
+
+On va raisonner par rapport aux valeurs propres, car leur signe indique directement la courbure de la fonction. Soit 
+`𝐻` la Hessienne évaluée en un point critique (où le gradient s'annule).
+
+`vals = np.linalg.eigvals(H)`
+
+---
+
+Code Python théorique pour déterminer la nature de ces points à partir de la Hessienne.
+
+```python
+import numpy as np
+
+def analyse_hessienne(H):
+    vals =  vals = np.linalg.eigvals(H)
+    print("H =\n", H)
+    print("Valeurs propres :", vals)
+
+    if np.all(vals > 0):
+        print("Conclusion : Hessienne définie positive → fonction convexe → minimum local.\n")
+    elif np.all(vals < 0):
+        print("Conclusion : Hessienne définie négative → fonction concave → maximum local.\n")
+    elif np.any(vals == 0):
+        print("Conclusion : Valeur propre nulle → test inconcluant.\n")
+    else:
+        print("Conclusion : Signes mélangés → point selle (ni convexe ni concave).\n")
+
+```
+
+---
+
+Les exemples qui suivent s'appliqueraient à un point en particulier où le gradient s'annulerait.
+
+$$
+(x_0, x_1, x_2)
+$$
+
+---
 
 
+# Exemple 1 : Hessienne définie positive (convexe)
+
+```python
+
+H1 = np.array([
+    [4, 1, 0],
+    [1, 3, 2],
+    [0, 2, 5]
+])
+analyse_hessienne(H1)
+
+```
+
+---
+
+# Exemple 2 : Hessienne définie négative (concave)
+
+```python
+
+H2 = np.array([
+    [-2, 0, 0],
+    [0, -3, 1],
+    [0, 1, -4]
+])
+analyse_hessienne(H2)
+
+```
+
+---
+
+# Exemple 3 : Hessienne avec signes mélangés (selle)
+
+```python
+
+H3 = np.array([
+    [2, 1, 0],
+    [1, -1, 0],
+    [0, 0, 3]
+])
+analyse_hessienne(H3)
+
+```
+
+---
+
+# Exemple 4 : Valeur propre nulle (test inconcluant)
+
+```python
+
+H4 = np.array([
+    [1, 0, 0],
+    [0, 0, 2],
+    [0, 2, 3]
+])
+analyse_hessienne(H4)
+```
+
+---
+
+# Exercice 
+
+Conclure 
+
+```python
+import numpy as np
+
+# Hessienne dimension 5
+H = np.array([
+    [4, 1, 0, 0, 2],
+    [1, 3, 2, 0, 0],
+    [0, 2, 5, 1, 0],
+    [0, 0, 1, 2, 1],
+    [2, 0, 0, 1, 3]
+])
+
+```
+
+## Vecteur gradient
+
+Le gradient est un vecteur qui "montre" où la fonction augmente le plus vite,
+et dont la longueur indique à quel point elle augmente vite.

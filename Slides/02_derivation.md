@@ -345,7 +345,7 @@ f2 = np.gradient(f1, x)
 ```
 
 Voir un exemple complet à tester dans un Notebook
-[code Numpy](../Starter_Python/project/notebooks/Examples/ex_etude_fonction.ipynb)
+[code Numpy](https://github.com/Antoine07/maths/blob/main/Examples/mes_tests.ipynb)
 
 ---
 
@@ -379,11 +379,12 @@ $$
 
 Elle s'applique lorsque :
 
-1. (f) est continue
+1. (f) est continue sur l'intervalle
 1. et (f(a)) et (f(b)) sont de signes opposés
   $$
   f(a)\cdot f(b) < 0.
   $$
+1. La fonction est strictement croissante ou décroissante sur l'intervalle de recherche.
 
 ---
 
@@ -403,7 +404,7 @@ Méthode **lente mais infaillible** si les conditions sont remplies.
 
 ---
 
-#  **Exemple Python très simple**
+#  **Exemple**
 
 On cherche la solution de :
 
@@ -411,11 +412,13 @@ $$
 f(x)=x^2 - 2 = 0
 $$
 
-La solution exacte est 
+Les solutions exactes sont 
 
 $$
-\sqrt{2}
+\pm \sqrt{2}
 $$
+
+La méthode dichotomique permet d'approcher la solution avec une erreur epsilon.
 
 ---
 
@@ -431,7 +434,7 @@ $$
 
 # TP Saturation numérique
 
-[Saturation numérique](https://github.com/Antoine07/maths/tree/main/Derivation/TPs/01_saturation_numerique.md)
+[Saturation numérique](https://github.com/Antoine07/maths/blob/main/Derivation/TPs/01_TP_saturation_numerique.md)
 
 ---
 

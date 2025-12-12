@@ -6,7 +6,7 @@ On part de la matrice :
 $$
 A=
 \begin{pmatrix}
-4 & 2\
+4 & 2\\
 2 & 4
 \end{pmatrix}.
 $$
@@ -147,7 +147,7 @@ $$
 
 ---
 
-# ✅ **3. Construction des matrices (P) et (D)**
+#  **3. Construction des matrices (P) et (D)**
 
 La matrice des vecteurs propres (colonnes) :
 
