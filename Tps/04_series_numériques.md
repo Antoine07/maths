@@ -46,6 +46,7 @@ Objectifs :
 3. Normalisation `min–max`
 
    Calculer pour chaque valeur
+   
    $$
    x_{\min\max} = \frac{x - x_{\min}}{x_{\max} - x_{\min}}.
    $$
