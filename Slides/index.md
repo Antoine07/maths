@@ -6,7 +6,7 @@ class: lead
 ---
 
 
-# **Cours de maths CODA** 1/2
+# **Cours de maths** 1/2
 
 ### [**Révisions**](https://antoine07.github.io/maths/revision.html) - .5 jour
 
@@ -20,7 +20,7 @@ class: lead
 
 ---
 
-# **Cours de maths CODA** 2/2
+# **Cours de maths** 2/2
 
 ### [**ACP**](https://antoine07.github.io/maths/statistiques.html) .75 jour
 
