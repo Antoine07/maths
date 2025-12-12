@@ -10,7 +10,7 @@ $$
 
 1. Identifier le domaine de définition de `T`.
 1. Calculer les limites de `T(t)` lorsque `t tend vers l'infini`
-1. Interpréter physiquement ces résultats.
+1. Interpréter physiquement ces résultats, `t` en secondes.
 
 1. Dérivée `T(t)`
 1. Résoudre l'équation `T(t)=0`.
