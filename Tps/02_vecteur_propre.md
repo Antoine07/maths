@@ -84,11 +84,12 @@ Y_n
 $$
 
 2. Déterminer le signe et le module de
+3. 
    $$
    \lambda_1 - \tfrac12, \qquad \lambda_2 - \tfrac12.
    $$
 
-3. Justifier que **la limite de `Yn`** lorsque `n tend vers l'infini` :
+4. Justifier que **la limite de `Yn`** lorsque `n tend vers l'infini` :
 
 **n'est pas contrôlée** par la valeur propre dominante, **mais dépend de la valeur propre qui maximise**
   $$
