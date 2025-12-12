@@ -34,7 +34,7 @@ $$
 On cherche quand la vitesse devient inférieure à **0.1°C/min** :
 
 $$
-R(t)=0.1
+R(t)=0.2
 $$
 
  Montrer que l'équation admet une unique solution dans l'intervalle `[5,15]`. Donner une valeur approchée au millième près.
