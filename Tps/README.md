@@ -6,6 +6,8 @@ Certaines facultatives dans les sujets.
 
 Rédigez et présentez vos résultats à l'aide d'un Notebook, avec des schémas éventuellement.
 
+Vous pouvez me rendre lors de la soutenance vos calculs sur papier.
+
 N'oubliez pas de rendre vos exercices en me les envoyants sur `Discord`
 
 Bon examen.
