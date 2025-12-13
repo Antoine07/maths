@@ -9,6 +9,13 @@ $$
 ### **Domaine et limites**
 
 1. Identifier le domaine de définition de `T`.
+
+Clairement :
+
+$$
+
+$$
+
 1. Calculer les limites de `T(t)` lorsque `t tend vers l'infini`
 1. Interpréter physiquement ces résultats, `t` en secondes.
 
@@ -37,7 +44,21 @@ $$
 R(t)=0.2
 $$
 
+Définissez la fonction suivante 
+
+```python
+# f(t) = R(t) - 0.2
+
+def f(t):
+    return 4*np.exp(-0.3*t)*(0.3*t - 1) - 0.2
+
+print(f(5)*f(15))
+# np.float64(-0.010952193419792358)
+```
+
  Montrer que l'équation admet une unique solution dans l'intervalle `[5,15]`. Donner une valeur approchée au millième près.
+
+ 1. La fonction est continue sur `[5,15]`, elle change de signe
 
 ## **Conclusion**
 
