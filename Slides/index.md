@@ -6,7 +6,7 @@ class: lead
 ---
 
 
-# **Cours de maths CODA** 1/2
+# **Cours de maths** 1/2
 
 ### [**Révisions**](https://antoine07.github.io/maths/revision.html) - .5 jour
 
@@ -20,9 +20,17 @@ class: lead
 
 ---
 
-# **Cours de maths CODA** 2/2
+# **Cours de maths** 2/2
 
-### [**ACP**](https://antoine07.github.io/maths/statistiques.html) .75 jour
+### [**Statistiques (plan)**](https://antoine07.github.io/maths/stat/index.html) .75 jour
+
+### [**Stat descriptives**](https://antoine07.github.io/maths/stat/01_stat_descriptive.html)
+
+### [**Covariance et corrélation**](https://antoine07.github.io/maths/stat/02_covariance_correlation.html)
+
+### [**Centrage-réduction**](https://antoine07.github.io/maths/stat/03_centrage_reduction.html)
+
+### [**ACP intro**](https://antoine07.github.io/maths/stat/04_acp_intro.html)
 
 ### [**Gradient**](https://antoine07.github.io/maths/gradient.html) .5 jour
 
