@@ -34,7 +34,7 @@ $$
 
 Consigne :
 
-1. Calculez $$\bar{x}$$
+1. Calculez $\bar{x}$
 2. Construisez `temps_centered = temps - np.mean(temps)`
 3. Interpretez les signes (positif/negatif)
 

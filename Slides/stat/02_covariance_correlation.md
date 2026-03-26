@@ -20,8 +20,8 @@ html: true
 
 Consigne :
 
-1. Calculez $$\bar{x}$$
-2. Calculez $$\bar{y}$$
+1. Calculez $\bar{x}$
+2. Calculez $\bar{y}$
 
 <details>
 <summary>Afficher la correction</summary>
@@ -43,7 +43,7 @@ $$
 
 Travail a faire :
 
-1. Calculez chaque terme $$(x_i-\bar{x})(y_i-\bar{y})$$
+1. Calculez chaque terme $(x_i-\bar{x})(y_i-\bar{y})$
 2. Deducez la covariance
 
 <details>
@@ -72,8 +72,8 @@ $$
 
 Consigne :
 
-1. Calculez $$\sigma_X$$ et $$\sigma_Y$$
-2. Calculez $$\rho$$
+1. Calculez $\sigma_X$ et $\sigma_Y$
+2. Calculez $\rho$
 3. Interpretez le signe et l'intensite
 
 <details>
@@ -96,16 +96,16 @@ Interpretation : tres forte correlation lineaire positive.
 
 Interpretez :
 
-1. $$\rho = 0.92$$
-2. $$\rho = -0.45$$
-3. $$\rho = 0$$
+1. $\rho = 0.92$
+2. $\rho = -0.45$
+3. $\rho = 0$
 
 <details>
 <summary>Afficher la correction</summary>
 
-1. $$\rho = 0.92$$ : lien lineaire tres fort positif
-2. $$\rho = -0.45$$ : lien lineaire negatif modere
-3. $$\rho = 0$$ : pas de lien lineaire detectable
+1. $\rho = 0.92$ : lien lineaire tres fort positif
+2. $\rho = -0.45$ : lien lineaire negatif modere
+3. $\rho = 0$ : pas de lien lineaire detectable
 </details>
 
 ---

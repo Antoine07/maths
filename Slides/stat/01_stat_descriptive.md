@@ -89,7 +89,7 @@ Calculez ensuite la variance et l'ecart-type.
 <details>
 <summary>Afficher la correction</summary>
 
-Avec $$\bar{x}\approx 14.17$$ :
+Avec $\bar{x}\approx 14.17$ :
 
 $$
 \sum (x_i-\bar{x})^2 \approx 10.85
@@ -156,7 +156,7 @@ Donnees triees :
 150, 160, 165, 170, 175
 ```
 
-Consigne : determinez $$Q_1$$ avec la methode vue en cours.
+Consigne : determinez $Q_1$ avec la methode vue en cours.
 
 <details>
 <summary>Afficher la correction</summary>
@@ -183,7 +183,7 @@ Ne pas afficher le resultat final sur cette slide.
 <details>
 <summary>Afficher la correction</summary>
 
-Avec $$n=5$$ :
+Avec $n=5$ :
 
 $$
 r=\frac{n+1}{4}=\frac{6}{4}=1.5
