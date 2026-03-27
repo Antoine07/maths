@@ -6,85 +6,130 @@ class: lead
 html: true
 ---
 
-# Covariance et correlation
+# Covariance et correlation avec NumPy
 
-## Cours
+## Cours + corrections detaillees
+
+---
+
+## Objectifs
+
+1. Calculer covariance et correlation en Python
+2. Expliquer les fonctions `np.cov` et `np.corrcoef`
+3. Maitriser la convention population (`ddof=0`)
+
+---
+
+## Convention sur la covariance
+
+Population totale :
+
+$$
+\mathrm{Cov}(X,Y)=\frac{1}{n}\sum (x_i-\bar{x})(y_i-\bar{y})
+$$
+
+En NumPy :
+
+1. `np.mean((x-x.mean())*(y-y.mean()))`
+2. `np.cov(x, y, bias=True)[0, 1]`
+
+Echantillon (`n-1`) : `np.cov(x, y, bias=False)[0, 1]`
 
 ---
 
 ## Exercice 2 - Donnees
 
-| X | 1 | 2 | 3 |
-| - | - | - | - |
-| Y | 2 | 4 | 5 |
+```python
+import numpy as np
+
+x = np.array([1, 2, 3], dtype=float)
+y = np.array([2, 4, 5], dtype=float)
+```
+
+---
+
+## Exercice 2 - Moyennes
 
 Consigne :
 
-1. Calculez $\bar{x}$
-2. Calculez $\bar{y}$
+1. Calculez $\bar{x}$ et $\bar{y}$
+2. Ecrivez les vecteurs centres
 
 <details>
 <summary>Afficher la correction</summary>
 
-$$
-\bar{x}=2,\qquad \bar{y}=\frac{11}{3}
-$$
+```python
+mx = np.mean(x)
+my = np.mean(y)
+
+xc = x - mx
+yc = y - my
+
+print(mx, my)  # 2.0 3.6666666666666665
+print(xc)      # [-1.  0.  1.]
+print(yc)      # [-1.66666667  0.33333333  1.33333333]
+```
 </details>
 
 ---
 
-## Exercice 2 - Covariance
+## Exercice 2 - Covariance (population)
 
-Formule :
+Consigne :
 
-$$
-\mathrm{Cov}(X,Y)=\frac{1}{3}\sum (x_i-\bar{x})(y_i-\bar{y})
-$$
-
-Travail a faire :
-
-1. Calculez chaque terme $(x_i-\bar{x})(y_i-\bar{y})$
-2. Deducez la covariance
+1. Calculez la covariance manuellement
+2. Verifiez avec NumPy (`ddof=0`)
+3. Comparez avec la version echantillon (`ddof=1`)
 
 <details>
 <summary>Afficher la correction</summary>
 
-Termes :
+```python
+cov_pop_manual = np.mean((x - mx) * (y - my))
+cov_pop_numpy  = np.cov(x, y, bias=True)[0, 1]
+cov_sample     = np.cov(x, y, bias=False)[0, 1]
+
+print(cov_pop_manual)  # 1.0
+print(cov_pop_numpy)   # 1.0
+print(cov_sample)      # 1.5
+```
+
+Population :
 
 $$
-\frac{5}{3},\ 0,\ \frac{4}{3}
+\mathrm{Cov}=1
 $$
 
-Donc :
-
-$$
-\mathrm{Cov}(X,Y)=\frac{1}{3}\left(\frac{5}{3}+0+\frac{4}{3}\right)=1
-$$
+Point cle : `np.cov` est en `n-1` par defaut (`bias=False`).
 </details>
 
 ---
 
 ## Exercice 2 - Correlation
 
-$$
-\rho=\frac{\mathrm{Cov}(X,Y)}{\sigma_X\sigma_Y}
-$$
-
 Consigne :
 
-1. Calculez $\sigma_X$ et $\sigma_Y$
+1. Calculez $\sigma_X$ et $\sigma_Y$ avec `ddof=0`
 2. Calculez $\rho$
-3. Interpretez le signe et l'intensite
+3. Interpretez
 
 <details>
 <summary>Afficher la correction</summary>
 
-$$
-\sigma_X=\sqrt{\frac{2}{3}},\qquad \sigma_Y=\frac{\sqrt{14}}{3}
-$$
+```python
+sx = np.std(x, ddof=0)
+sy = np.std(y, ddof=0)
+
+rho_formula = cov_pop_manual / (sx * sy)
+rho_numpy   = np.corrcoef(x, y)[0, 1]
+
+print(sx, sy)       # 0.816496... 1.247219...
+print(rho_formula)  # 0.981980...
+print(rho_numpy)    # 0.981980...
+```
 
 $$
-\rho=\frac{1}{\sigma_X\sigma_Y}\approx 0.98
+\rho\approx 0.98
 $$
 
 Interpretation : tres forte correlation lineaire positive.
@@ -114,16 +159,18 @@ Interpretez :
 
 Correlation forte ne veut pas dire causalite.
 
-Toujours verifier avec :
+Toujours verifier :
 
-1. un nuage de points
-2. le contexte metier / physique
-3. des variables explicatives plausibles
+1. le nuage de points
+2. le contexte metier
+3. la plausibilite causale
 
 ---
 
-## Resume
+## Resume des fonctions NumPy
 
-1. Covariance : sens global de variation commune
-2. Correlation : intensite normalisee entre -1 et +1
-3. Toujours completer avec une lecture graphique
+1. `np.mean(x)` : moyenne
+2. `np.std(x, ddof=0)` : ecart-type population
+3. `np.cov(x, y, bias=True)` : covariance population
+4. `np.cov(x, y, bias=False)` : covariance echantillon
+5. `np.corrcoef(x, y)` : coefficient de correlation de Pearson

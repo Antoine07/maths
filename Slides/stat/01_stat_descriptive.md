@@ -6,17 +6,32 @@ class: lead
 html: true
 ---
 
-# Statistiques descriptives
+# Statistiques descriptives avec NumPy
 
-## Cours
+## Cours + corrections detaillees
 
 ---
 
 ## Objectifs
 
-1. Calculer moyenne, mediane, variance, ecart-type
-2. Lire un tableau d'effectifs
-3. Determiner le quartile Q1
+1. Utiliser `np.mean`, `np.median`, `np.var`, `np.std`, `np.percentile`
+2. Distinguer population totale et echantillon
+3. Comprendre l'impact de `ddof`
+4. Calculer et interpreter `Q1`
+
+---
+
+## Convention importante : population vs echantillon
+
+Population totale (on a tous les individus) :
+
+1. variance population : `np.var(x, ddof=0)`
+2. ecart-type population : `np.std(x, ddof=0)`
+
+Echantillon (on estime une population) :
+
+1. variance echantillon : `np.var(x, ddof=1)`
+2. ecart-type echantillon : `np.std(x, ddof=1)`
 
 ---
 
@@ -24,84 +39,71 @@ html: true
 
 Donnees :
 
-```text
-12, 15, 14, 13, 16, 15
+```python
+import numpy as np
+ages = np.array([12, 15, 14, 13, 16, 15], dtype=float)
 ```
 
 ---
 
-## Exercice 1 - Moyenne
+## Exercice 1 - Moyenne et mediane
 
 Consigne :
 
-1. Calculez la moyenne de la serie
-2. Interpretez le resultat
+1. Calculez la moyenne avec NumPy
+2. Calculez la mediane avec NumPy
+3. Interpretez les 2 valeurs
 
 <details>
 <summary>Afficher la correction</summary>
 
-$$
-\bar{x}=\frac{12+15+14+13+16+15}{6}=\frac{85}{6}\approx 14.17
-$$
+```python
+mean_age = np.mean(ages)
+median_age = np.median(ages)
 
-Interpretation : age moyen du groupe = 14.17 ans.
-</details>
-
----
-
-## Exercice 1 - Mediane
-
-Serie triee :
-
-```text
-12, 13, 14, 15, 15, 16
+print(mean_age)    # 14.166666666666666
+print(median_age)  # 14.5
 ```
 
-Consigne :
-
-1. Identifiez les deux valeurs centrales
-2. Calculez la mediane
-
-<details>
-<summary>Afficher la correction</summary>
-
-Il y a 6 valeurs, donc mediane = moyenne des 2 valeurs centrales :
-
 $$
-\text{Mediane}=\frac{14+15}{2}=14.5
+\bar{x}=\frac{85}{6}\approx 14.17,\qquad \text{Mediane}=14.5
 $$
+
+Interpretation : l'age central (mediane) est legerement au-dessus de la moyenne.
 </details>
 
 ---
 
-## Exercice 1 - Ecart-type
+## Exercice 1 - Variance et ecart-type (population)
 
 Consigne :
 
-$$
-\bar{x}=\frac{1}{n}\sum x_i,\qquad
-\text{Var}=\frac{1}{n}\sum(x_i-\bar{x})^2,\qquad
-\sigma=\sqrt{\text{Var}}
-$$
-
-Calculez ensuite la variance et l'ecart-type.
+1. Calculez la variance population avec `ddof=0`
+2. Calculez l'ecart-type population avec `ddof=0`
+3. Comparez avec `ddof=1`
 
 <details>
 <summary>Afficher la correction</summary>
 
-Avec $\bar{x}\approx 14.17$ :
+```python
+var_pop = np.var(ages, ddof=0)
+std_pop = np.std(ages, ddof=0)
+
+var_sample = np.var(ages, ddof=1)
+std_sample = np.std(ages, ddof=1)
+
+print(var_pop, std_pop)        # 1.805555... 1.343709...
+print(var_sample, std_sample)  # 2.166666... 1.471960...
+```
+
+Population totale :
 
 $$
-\sum (x_i-\bar{x})^2 \approx 10.85
+\text{Var}=\frac{1}{n}\sum (x_i-\bar{x})^2\approx 1.81,\qquad
+\sigma\approx 1.35
 $$
 
-$$
-\text{Var}=\frac{10.85}{6}\approx 1.81
-$$
-
-$$
-\sigma=\sqrt{1.81}\approx 1.35
-$$
+`ddof=1` donne une dispersion un peu plus grande car on corrige le biais d'echantillonnage.
 </details>
 
 ---
@@ -110,8 +112,8 @@ $$
 
 Donnees :
 
-```text
-160, 170, 175, 150, 165
+```python
+tailles = np.array([160, 170, 175, 150, 165], dtype=float)
 ```
 
 Tableau d'effectifs :
@@ -122,85 +124,70 @@ Tableau d'effectifs :
 
 ---
 
-## Exercice 3 - Moyenne et dispersion
+## Exercice 3 - Moyenne et dispersion (NumPy)
 
 Consigne :
 
-1. Calculez la moyenne
-2. Calculez la variance
-3. Calculez l'ecart-type
+1. Calculez moyenne, variance, ecart-type (population)
+2. Donnez les interpretations
 
 <details>
 <summary>Afficher la correction</summary>
 
-$$
-\bar{x}=\frac{150+160+165+170+175}{5}=164
-$$
+```python
+m = np.mean(tailles)
+v = np.var(tailles, ddof=0)
+s = np.std(tailles, ddof=0)
 
-$$
-\text{Var}=\frac{(150-164)^2+(160-164)^2+(165-164)^2+(170-164)^2+(175-164)^2}{5}=74
-$$
-
-$$
-\sigma=\sqrt{74}\approx 8.60
-$$
-</details>
-
----
-
-## Exercice 3 - Quartile Q1
-
-Donnees triees :
-
-```text
-150, 160, 165, 170, 175
+print(m, v, s)  # 164.0 74.0 8.602325267...
 ```
 
-Consigne : determinez $Q_1$ avec la methode vue en cours.
-
-<details>
-<summary>Afficher la correction</summary>
-
 $$
-Q_1=155
+\bar{x}=164,\qquad \text{Var}=74,\qquad \sigma\approx 8.60
 $$
+
+Interpretation : les tailles s'ecartent en moyenne d'environ 8.6 cm autour de 164 cm.
 </details>
 
 ---
 
-## Aide methode
+## Exercice 3 - Quartiles avec NumPy
 
-Methode interpolation :
+Consigne :
 
-$$
-r=\frac{n+1}{4}
-$$
-
-Puis interpolation entre les deux valeurs encadrant le rang.
-
-Ne pas afficher le resultat final sur cette slide.
+1. Triez la serie
+2. Calculez `Q1` avec la methode du cours (rang `(n+1)/4`)
+3. Comparez avec la methode par defaut de NumPy
 
 <details>
 <summary>Afficher la correction</summary>
 
-Avec $n=5$ :
+```python
+x = np.sort(tailles)
+q1_weibull = np.percentile(x, 25, method="weibull")  # methode (n+1)/4
+q1_linear  = np.percentile(x, 25, method="linear")   # defaut NumPy
+
+print(q1_weibull)  # 155.0
+print(q1_linear)   # 160.0
+```
+
+Avec la methode du cours :
 
 $$
-r=\frac{n+1}{4}=\frac{6}{4}=1.5
-$$
-
-Interpolation entre 150 et 160 :
-
-$$
+r=\frac{n+1}{4}=\frac{6}{4}=1.5,
+\qquad
 Q_1=150+0.5(160-150)=155
 $$
+
+Point cle : pour etre coherent avec la correction du cours, utiliser `method="weibull"`.
 </details>
 
 ---
 
-## Resume
+## Resume des fonctions NumPy
 
-1. Moyenne : niveau global
-2. Mediane : valeur centrale robuste
-3. Ecart-type : dispersion autour de la moyenne
-4. Quartiles : position de la serie en 4 parties
+1. `np.mean(x)` : moyenne
+2. `np.median(x)` : mediane
+3. `np.var(x, ddof=0)` : variance population
+4. `np.std(x, ddof=0)` : ecart-type population
+5. `np.percentile(x, 25, method="weibull")` : `Q1` version cours
