@@ -1,0 +1,19 @@
+services:
+  jupyterlab:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: maths-jupyterlab
+    ports:
+      - "8888:8888"
+    volumes:
+      - ../:/workspace
+    working_dir: /workspace
+    command: >
+      start-notebook.py
+      --ServerApp.ip=0.0.0.0
+      --ServerApp.port=8888
+      --ServerApp.token=''
+      --ServerApp.password=''
+      --ServerApp.root_dir=/workspace
+      --IdentityProvider.token=''

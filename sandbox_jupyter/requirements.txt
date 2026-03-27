@@ -1,0 +1,4 @@
+# Light stack for the statistics course
+numpy==2.1.3
+pandas==2.2.3
+jupyterlab>=4.2,<5
